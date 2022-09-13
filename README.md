@@ -8,7 +8,7 @@ La pagina esta destinada a todo tipo de publico con necesidades o deseos de viaj
 
 ### Soraimar Bernal
 * Correo: soraimar.bernal@gmail.com
-* Linkedin : https://www.linkedin.com/in/soraimar-bernal-abb72a166/
+* Linkedin : [Soraimar](https://www.linkedin.com/in/soraimar-bernal-abb72a166/)
 
 ### Camila Raponi
 
