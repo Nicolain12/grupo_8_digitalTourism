@@ -13,3 +13,5 @@ La pagina esta destinada a todo tipo de publico con necesidades o deseos de viaj
 ### Camila Raponi
 
 ### Nicolas Lain
+* Correo: lainnicolas1@gmail.com
+* Linkedin: www.linkedin.com/in/nicolaslain
