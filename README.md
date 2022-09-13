@@ -5,6 +5,8 @@ La pagina esta destinada a todo tipo de publico con necesidades o deseos de viaj
 ## Contribuyentes 
 
 ### Adrian Uliassi
+* Correo: adrianuliassi@hotmail.com
+* Linkedin : 
 
 ### Soraimar Bernal
 * Correo: soraimar.bernal@gmail.com
