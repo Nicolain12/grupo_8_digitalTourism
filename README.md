@@ -4,6 +4,7 @@ La pagina esta destinada a todo tipo de publico con necesidades o deseos de viaj
 
 ## Contribuyentes 
 
+
 ### Adrian Uliassi
 * Correo: adrianuliassi@hotmail.com
 * Linkedin : 
@@ -19,3 +20,12 @@ La pagina esta destinada a todo tipo de publico con necesidades o deseos de viaj
 ### Nicolas Lain
 * Correo: lainnicolas1@gmail.com
 * Linkedin: www.linkedin.com/in/nicolaslain
+
+
+## Paginas referentes
+* https://www.viajesfalabella.cl/
+* https://viajes.travel.cl/
+* https://www.atrapalo.cl/
+* https://www.despegar.cl/
+* https://www.cocha.com/
+* https://www.enjoyandtravels.cl/
