@@ -7,7 +7,7 @@ La pagina esta destinada a todo tipo de publico con necesidades o deseos de viaj
 
 ### Adrian Uliassi
 * Correo: adrianuliassi@hotmail.com
-* Linkedin : 
+* Linkedin : https://www.linkedin.com/in/adrian-uliassi/
 
 ### Soraimar Bernal
 * Correo: soraimar.bernal@gmail.com
