@@ -1,5 +1,5 @@
-# Flying (nombre temporal)
-Este sitio web esta destinado a la venta de paquetes de viajes cerrados. Se ofrecen dentro de los paquetes el transporte aéreos, alojamiento y dependiendo del paquete pension completa o media pension.
+# Digital Tourism
+Este sitio web esta destinado a la venta de paquetes de viajes cerrados y personalizados. Se ofrecen dentro de los paquetes el transporte aéreos, alojamiento y pension completa o media pension.
 La pagina esta destinada a todo tipo de publico con necesidades o deseos de viajar.
 
 ## Contribuyentes 
