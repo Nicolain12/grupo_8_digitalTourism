@@ -1,0 +1,24 @@
+{
+  "name": "proyectointegrador",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodemon app.js",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nicolain12/grupo_8_nombre.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nicolain12/grupo_8_nombre/issues"
+  },
+  "homepage": "https://github.com/Nicolain12/grupo_8_nombre#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20"
+  }
+}
