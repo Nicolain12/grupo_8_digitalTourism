@@ -16,8 +16,15 @@
     <header>
         <div class="div-logo">
             <a href="/">
-                <img class="logo-img" src="/images/logo-latam.jpg" alt="Imagen Logo">
+                <img class="logo-img" src="/images/logo.jpg" alt="Imagen Logo">
             </a>
+        </div>
+        <div class="div-pages">
+            <ul type="none">
+                <li><a href="/customProduct">Crea tu experiencia</a></li>
+                <li><a href="/productDetail">Paquetes armados</a></li>
+                <li><a href="/productDetail">ofertas</a></li>
+            </ul>
         </div>
         <div class="div-links">
             <div class="div-i-1">
@@ -27,48 +34,65 @@
                 <a href="/login"><i class="fa-solid fa-user"></i></a>
             </div>
         </div>
+        <div class="burger-menu">
+            <a href=""><i class="fas fa-bars"></i></a>
+        </div>
     </header>
     <main>
+        <div class="carrousell">
+            <H1>CARROUSELL DE FOTOS</H1>
+        </div>
         <section class="section-nav">
-            <div class="div-filters">
-                <select name="" id="">
-                    <option value="none">Elegi una opción</option>
-                    <option value="">1</option>
-                    <option value="">2</option>
-                    <option value="">3</option>
-                </select>
-                <select name="" id="">
-                    <option value="none">Elegi una opción</option>
-                    <option value="">1</option>
-                    <option value="">2</option>
-                    <option value="">3</option>
-                </select>
-                <select name="" id="">
-                    <option value="none">Elegi una opción</option>
-                    <option value="">1</option>
-                    <option value="">2</option>
-                    <option value="">3</option>
-                </select>
+            <div class="div-top">
+                <div class="busca-paquete">
+                    <h4>Busca tu paquete aqui</h4>
+                </div>
+                <div class="div-filters">
+                <div class="main-select">
+                    <select name="" id="">
+                        <option value="none">Elegi una opción</option>
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                    </select>
+            </div>
+                <div class="main-select">
+                    <select name="" id="">
+                        <option value="none">Elegi una opción</option>
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                    </select>
+            </div>
+                <div class="main-select">
+                    <select name="" id="">
+                        <option value="none">Elegi una opción</option>
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                    </select>
+            </div>
+                </div>
             </div>
             <form class="nav-gaps" action="">
                 <div class="div-origen-destino">
                     <div class="div-origen">
-                        <label class="main-label" for="">Origen</label>
-                        <input class="main-input" type="text" value="" name="">
+                        <label class="main-label" for="Origen"><i class="fa-solid fa-plane-departure"></i></label>
+                        <input class="main-input" type="text" id="Origen" name="Origen" placeholder="Origen">
                     </div>
                     <div class="div-destino">
-                        <label class="main-label" for="">Destino</label>
-                        <input class="main-input" type="text" value="" name="">
+                        <label class="main-label" for="destino"><i class="fa-solid fa-location-dot"></i></label>
+                        <input class="main-input" type="text" id="destino" name="destino" placeholder="Destino">
                     </div>                                
                 </div>
                 <div class="div-ida-vuelta">
                     <div class="div-ida">
-                        <label class="main-label" for="">Fecha ida</label>
-                        <input class="main-input" type="text" value="" name="">
+                        <label class="main-label" for="ida">Fecha ida</label>
+                        <input class="main-input" type="date" id="ida" name="ida">
                     </div>
                     <div class="div-vuelta">
-                        <label class="main-label" for="">Fecha vuelta</label>
-                        <input class="main-input" type="text" value="" name="">
+                        <label class="main-label" for="vuelta">Fecha vuelta</label>
+                        <input class="main-input" type="date" id="vuelta" name="vuelta">
                     </div>                                    
                 </div>
                 <div class="div-search">
@@ -77,9 +101,94 @@
             </form>
 
         </section>
+        <section class="article-section">
+            <h2 class="articles-title">Paquetes mas comprados</h2>
+            <article class="main-article">
+                <div class="div-precio">
+                    <p class="precio">$6.770</p>
+                </div>
+                <img src="/images/logo.jpg" alt=""> 
+                <div class="div-viaje">
+                    <h4 class="viaje">De ++++ A ++++</h4>
+                </div>
+                <div class="div-descripcion">
+                    <p class="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Fuga quos, quisquam possimus neque nisi eos nam mollitia voluptatibus repudiandae simi,
+                        dicta architecto fugit corrupti eius aliquam ex dolor placeat assumenda.</p>
+                </div>                                   
+            </article>     
+            <article class="main-article">
+                <div class="div-precio">
+                    <p class="precio">$6.770</p>
+                </div>
+                <img src="/images/logo.jpg" alt=""> 
+                <div class="div-viaje">
+                    <h4 class="viaje">De ++++ A ++++</h4>
+                </div>
+                <div class="div-descripcion">
+                    <p class="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Fuga quos, quisquam possimus neque nisi eos nam mollitia voluptatibus repudiandae simi,
+                        dicta architecto fugit corrupti eius aliquam ex dolor placeat assumenda.</p>
+                </div>                                   
+            </article>  
+            <article class="main-article">
+                <div class="div-precio">
+                    <p class="precio">$6.770</p>
+                </div>
+                <img src="/images/logo.jpg" alt=""> 
+                <div class="div-viaje">
+                    <h4 class="viaje">De ++++ A ++++</h4>
+                </div>
+                <div class="div-descripcion">
+                    <p class="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Fuga quos, quisquam possimus neque nisi eos nam mollitia voluptatibus repudiandae simi,
+                        dicta architecto fugit corrupti eius aliquam ex dolor placeat assumenda.</p>
+                </div>                                   
+            </article>  
+            <article class="main-article">
+                <div class="div-precio">
+                    <p class="precio">$6.770</p>
+                </div>
+                <img src="/images/logo.jpg" alt=""> 
+                <div class="div-viaje">
+                    <h4 class="viaje">De ++++ A ++++</h4>
+                </div>
+                <div class="div-descripcion">
+                    <p class="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Fuga quos, quisquam possimus neque nisi eos nam mollitia voluptatibus repudiandae simi,
+                        dicta architecto fugit corrupti eius aliquam ex dolor placeat assumenda.</p>
+                </div>                                   
+            </article>  
+        </section>
     </main>
     <footer>
 
-    </footer>
+        <div class="footer-main">
+         <div class="footer-div">
+             <i class="fa-solid fa-credit-card"></i>
+             <h3>Pagá con tarjeta o en efectivo</h3>
+             <p>Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en
+                 puntos de pago. ¡Y siempre es seguro!</p>
+            </div>
+     
+             <div class="footer-div">
+                 <i class="fa-solid fa-gift"></i>
+           <h3>Envío gratis desde $ 2.500</h3>
+           <p>Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en miles de
+               productos. Es un beneficio de Mercado Puntos.</p>
+             </div>
+     
+             <div class="footer-div">
+                 <i class="fa-solid fa-user-shield"></i>
+           <h3>Seguridad, de principio a fin</h3>
+           <p>¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer,
+               porque estás siempre protegid@.</p>
+             </div>
+        </div>
+ 
+       <div class="footer-footer">
+         <h3 class="ff-content">Copyright © 1999-2020 MercadoLiebre S.R.L.</h3>
+       </div>
+     </footer>
 </body>
 </html>
