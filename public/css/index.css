@@ -4,7 +4,7 @@
 font-family: 'Roboto', sans-serif; (bold: 200, 400 y 600)
 */
 *{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Lato', sans-serif;
     box-sizing: border-box;
 }
 /*HEADER*/
@@ -110,6 +110,7 @@ main{
     width: 100%;
     display: flex;
     flex-direction: column;
+    background-color: aliceblue;
 
 }
 .div-top{
@@ -123,6 +124,7 @@ main{
 }
 .busca-paquete h4{
     margin-left: 2%;
+    background-color: aliceblue;
 }
 .div-filters{
     display: flex;
@@ -138,7 +140,7 @@ main{
 }
 .main-select select{
     width: 100%;
-    border-radius: 20px;
+    border-radius: 5px;
 }
 /*NAV-GAPS*/
 
@@ -166,10 +168,10 @@ main{
 
 .main-input{
     width: 60%;
-    height: 100%;
+    height: 2em;
     margin-left: 2%;
     border: black 1px solid;
-    border-radius: 20px;
+    border-radius: 5px;
 }
 .main-label{
     margin-bottom: 2%;
@@ -187,10 +189,12 @@ main{
     margin-top: 20px;
     margin-bottom: 20px;
     transition: all, 0.5s;
+    border-radius: 5px;
 }
 .search-buttom:hover{
     color: white;
     background-color: #2155CD;
+
 }
 
 /*ARTICLES*/
@@ -209,7 +213,12 @@ main{
     width: 80%;
     margin-top: 5%;
     border-radius: 20px;
-    border: 1px solid black;
+    box-shadow: 0px 0px 10px rgb(100,100,100);
+    background-color: aliceblue;
+    margin-bottom: 10%;
+}
+.main-article:hover{
+    box-shadow: 0px 0px 50px rgb(100,100,100);
 }
 .main-article img{
     width: 100%;  
@@ -222,11 +231,16 @@ main{
 .div-viaje{
     width: 100%;
     font-size: 14px;
+    margin-left: 2%;
 }
 .div-descripcion{
     width: 100%;
     font-size: 12px;
 }
+.div-descripcion p{
+    margin: 0% 3% 3% 3%
+}
+
 
 
 /*FOOTER*/
@@ -234,7 +248,6 @@ main{
 footer{
     width: 100%;
     display: flex;
-    margin-top: 10%;
     flex-direction: column;
     border-top: rgb(100,100,100) solid 1px;
 }
@@ -251,9 +264,8 @@ footer{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
+    align-items:flex-start;
     width: 80%;
-    box-shadow: 0px 0px 5px rgb(100,100,100);
     border-radius: 5%;
 }
 .footer-div:hover{
@@ -262,19 +274,71 @@ footer{
 .footer-div:hover i{
     font-size: 35px;
 }
-.footer-div i{
-    color: #1259c3;
-    margin: 5px 5px 10px 5px;
-    font-size: 2em;
-}
+
 .footer-div h3{
-    text-align: center;
-    margin: 0% 5% 2% 5%;
+    margin-left: 3%;
 }
-.footer-div p{
-    text-align: center;
-    margin: 0% 5% 0% 5%;
-    font-weight: 400;
+.main-ul{
+    margin-left: 6%;
+    margin-top: 0%;
+    padding-left: 0%;
+}
+.main-ul li{
+    list-style-type: none;
+    margin-bottom: 10%;
+}
+.main-ul li a{
+    text-decoration: none;
+}
+.midle{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.contacta{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.contacta h3{
+    margin-left: 10%;
+}
+
+.redes{
+    width: 100%;
+    display: flex;
+}
+.redes a{
+    width: 15%;
+    margin-left: 5%;
+}
+.redes a img{
+    width: 100%;
+}
+#first-img{
+    margin-left: 11%;
+}
+.descarga{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.descarga h3{
+    margin-left: 10%;
+}
+
+.plataformas{
+    width: 100%;
+    display: flex;
+}
+.plataformas a{
+    width: 30%;
+    margin-left: 10%;
+}
+.plataformas a img{
+    width: 100%;
+    margin-left: 11%;
 }
 .footer-footer{
     margin-top: 3%;
@@ -334,6 +398,9 @@ footer{
     }
 
 /*MAIN*/
+    main{
+        background-image: url(/images/backgroundBeach.jpg);
+    }
     .section-nav{
         width: 80%;
         border-radius: 20px;
@@ -376,15 +443,27 @@ footer{
     }
 
 /*FOOTER*/
+
     .footer-div{
         width: 25%;
     }
-
+    .contacta{
+        width: 40%;
+    }
+    .descarga{
+        width: 40%;
+    }
 }
 @media (min-width: 1024px){
+
     .div-logo a{
         width: 121px;
         height: 97px;
+    }   
+     main{
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
     }
     .main-article{
         width: 20%;
