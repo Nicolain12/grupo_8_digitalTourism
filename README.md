@@ -2,12 +2,13 @@
 Este sitio web esta destinado a la venta de paquetes de viajes cerrados y personalizados. Se ofrecen dentro de los paquetes el transporte aéreos, alojamiento y pension completa o media pension.
 La pagina esta destinada a todo tipo de publico con necesidades o deseos de viajar.
 
-## Contribuyentes 
+## Product backlog
+* [Trello](https://trello.com/b/34tGsZEu/grupo8)
 
-
+## Contribuyentes
 ### Adrian Uliassi
 * Correo: adrianuliassi@hotmail.com
-* Linkedin : https://www.linkedin.com/in/adrian-uliassi/
+* Linkedin : [Adrian](https://www.linkedin.com/in/adrian-uliassi/)
 
 ### Soraimar Bernal
 * Correo: soraimar.bernal@gmail.com
@@ -15,12 +16,11 @@ La pagina esta destinada a todo tipo de publico con necesidades o deseos de viaj
 
 ### Camila Raponi
 * Correo: camilaraponi@gmail.com
-* Linkedin:
+* Linkedin: [Camila](https://www.linkedin.com/in/camila-andrea-raponi-2738b61a2/)
 
 ### Nicolas Lain
 * Correo: lainnicolas1@gmail.com
-* Linkedin: www.linkedin.com/in/nicolaslain
-
+* Linkedin: [Nicolaslain](www.linkedin.com/in/nicolaslain)
 
 ## Paginas referentes
 * https://www.viajesfalabella.cl/
@@ -29,4 +29,3 @@ La pagina esta destinada a todo tipo de publico con necesidades o deseos de viaj
 * https://www.despegar.cl/
 * https://www.cocha.com/
 * https://www.enjoyandtravels.cl/
-
