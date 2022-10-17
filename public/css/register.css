@@ -37,7 +37,8 @@
     font-size: 18px;
     line-height: 40px;
   }
-  
+
+   
   .form-register a {
     color: white;
     text-decoration: none;
@@ -54,6 +55,6 @@
     border: none;
     padding: 12px;
     color: white;
-    margin: 16px 0;
+    margin: 30px 0;
     font-size: 16px;
   }
