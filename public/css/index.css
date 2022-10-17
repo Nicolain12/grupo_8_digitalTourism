@@ -227,6 +227,7 @@ main{
 }
 .div-precio{
     width: 100%;
+    margin-left: 2%;
 }
 .div-viaje{
     width: 100%;
@@ -347,32 +348,7 @@ footer{
     font-size: 14px;
 }
 
-@media(min-width:320px){
 
-}
-@media(min-width:425px){
-
-/*LOGO*/
-
-.div-logo{
-    width: 25%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.div-logo a{
-    width: 80%; 
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.logo-img{
-    width: 80%;
-}
-}
 @media (min-width: 768px){
 /*HEADER*/
 
