@@ -79,6 +79,63 @@ header{
     font-size: 30px;
 }
 
+/*Body*/
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main section{
+    display: flex;
+    flex-direction: column;
+    border:solid 1px;
+    width: 95%;
+    margin: 0 20px;
+
+}
+
+main h3.sub-cart{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 20px;
+}
+main section img {
+    width: 40%;
+    padding: 10px 0;
+}
+
+main section div.img-cart{
+    display: flex;
+    justify-content: center;
+}
+
+main section div{
+    display: flex;
+    align-items: center;
+}
+main section.vuelos div p {
+    padding: 0 10px;
+}
+
+main section div.precio-product-cart{
+     padding: 0 20px;
+}
+main section.total-comprar{
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    border: none;
+
+}
+
+.botons {
+    background: #1f53c5;
+    padding: 12px;
+    color: white;
+    font-size: 16px;
+  }
+
+
 /*FOOTER*/
 
 footer{
@@ -184,7 +241,7 @@ footer{
 }
 @media (min-width: 768px){
     /*HEADER*/
-    
+  
         .div-logo a{
             width: 50%; 
             height: 100%;
@@ -205,6 +262,20 @@ footer{
         .burger-menu{
             display: none;
         }
+
+    /*Body */
+    main section{
+        display: flex;
+        flex-direction: row;
+        border:solid 1px;
+    
+    }
+
+    
+    main section div.img-cart{
+        display: flex;
+    }
+        
     
     /*FOOTER*/
     
