@@ -5,6 +5,8 @@ La pagina esta destinada a todo tipo de publico con necesidades o deseos de viaj
 ## Product backlog
 * [Trello](https://trello.com/b/34tGsZEu/grupo8)
 
+soraimar
+
 ## Contribuyentes
 ### Adrian Uliassi
 * Correo: adrianuliassi@hotmail.com
