@@ -107,6 +107,7 @@ main section img {
 main section div.img-cart{
     display: flex;
     justify-content: center;
+    max-width: 320px;
 }
 
 main section div{
@@ -118,7 +119,9 @@ main section.vuelos div p {
 }
 
 main section div.precio-product-cart{
-     padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    min-width: 240px;
 }
 main section.total-comprar{
     display: flex;
