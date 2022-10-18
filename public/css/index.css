@@ -1,5 +1,3 @@
-
-
 /* 
 font-family: 'Roboto', sans-serif; (bold: 200, 400 y 600)
 */
@@ -7,6 +5,16 @@ font-family: 'Roboto', sans-serif; (bold: 200, 400 y 600)
     font-family: 'Lato', sans-serif;
     box-sizing: border-box;
 }
+
+#carouselExampleDark{
+    width: 100%;
+    height: 25vh;
+}
+.carousel-inner{
+    height: 100%;
+    width: 100%;
+}
+
 /*HEADER*/
 
 header{
@@ -19,7 +27,7 @@ header{
 /*LOGO*/
 
 .div-logo{
-    width: 30%;
+    width: 10%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -34,7 +42,7 @@ header{
 }
 
 .logo-img{
-    width: 80%;
+    width: 100%;
     height: 100%;
 }
 
@@ -49,12 +57,27 @@ header{
     width: 100%;
     padding-left: 0px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: baseline;
 }
+.div-pages ul li{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.div-pages ul li:hover{
+    border-radius: 5px;
+    border: black solid 1px;
+}
+.div-pages ul li:hover a{
+   font-weight: 600; 
+}
+
 .div-pages ul li a{
     text-decoration: none;
     color: white;
+    margin: 1% 2% 1% 2%;
 }
 
 .div-links{
@@ -184,32 +207,29 @@ main{
     text-align: center;
 }
 
-.search-buttom{
+.btn-primary{
     width: 135px;
-    height: 30px;
-    margin-top: 20px;
     margin-bottom: 20px;
-    transition: all, 0.5s;
-    border-radius: 5px;
 }
-.search-buttom:hover{
-    color: white;
-    background-color: #2155CD;
 
-}
 
 /*ARTICLES*/
 
-.article-section{
+.title-div{
+    width: 100%;
     margin-top: 10%;
+}
+
+.articles-title{
+    margin-left: 3%;
+    width: 100%;
+}
+.article-section{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
-.articles-title{
-    width: 100%;
-    margin-left: 5%;
-}
+
 .main-article{
     width: 80%;
     margin-top: 5%;
@@ -349,6 +369,11 @@ footer{
 
 
 @media (min-width: 768px){
+
+    #carouselExampleDark{
+        height: 40vh;
+    }
+    
 /*HEADER*/
 
     .div-logo a{
@@ -373,9 +398,9 @@ footer{
     }
 
 /*MAIN*/
-    main{
+    /* main{
         background-image: url(/images/backgroundBeach.jpg);
-    }
+    } */
     .section-nav{
         width: 80%;
         border-radius: 20px;
@@ -388,7 +413,7 @@ footer{
     .busca-paquete h4{
         margin-left: 10%;
         height: 30px;
-        width: 25%;
+        width: 300px;
         margin-top: 0px;
         margin-bottom: 0px;
         position: relative;
@@ -430,6 +455,9 @@ footer{
     }
 }
 @media (min-width: 1024px){
+    #carouselExampleDark{
+        height: 50vh;
+    }
 
     .div-logo a{
         width: 121px;
