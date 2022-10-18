@@ -269,9 +269,7 @@ footer{
     width: 80%;
     border-radius: 5%;
 }
-.footer-div:hover{
-    box-shadow: 0px 0px 15px rgb(100,100,100);
-}
+
 .footer-div:hover i{
     font-size: 35px;
 }
