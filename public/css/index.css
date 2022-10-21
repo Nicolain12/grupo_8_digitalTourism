@@ -7,7 +7,7 @@ font-family: 'Roboto', sans-serif; (bold: 200, 400 y 600)
 }
 .desplegable-div{
     width: 100%;
-    display: none;
+    display: flex;
     justify-content: flex-end;
     position:absolute;
 }
