@@ -10,7 +10,9 @@ const productDetailRoutes = require('./routes/productDetail.js')
 const registerRoutes = require('./routes/register.js')
 
 const publicPath = path.resolve(__dirname, './public')
+
 app.use(express.static(publicPath))
+app.set('view engine', 'ejs')
 
 const PORT = process.env.PORT || 3000
 app.listen(PORT, () => console.log(`Servidor corriendo en el puerto ${PORT}`))
