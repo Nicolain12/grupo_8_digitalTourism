@@ -43,7 +43,7 @@ header{
 }
 .div-pages ul{
     width: 100%;
-    padding-left: 0px;
+    padding-left: 0;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -98,10 +98,9 @@ header{
     opacity: revert;
     padding: 7%;
     width: 100%;
-    box-shadow: rgb(16 0 79 / 30%) 0px 2px 8px 0px;
+    box-shadow: rgb(16 0 79 / 30%) 0 2px 8px 0;
     transition: background-color 0.4s ease 0s, box-shadow 0.4s ease 0s;
     background-color: rgb(255, 255, 255);
-    border-radius: 0  0 8px 8px;
 }
 .detail div {
     display: flex;
@@ -115,7 +114,19 @@ header{
     font-size: 14px;
     color: rgb(255, 255, 255);
     border-radius: 10px 10px 0  0;
+    background-color: #2155CD;
+    box-shadow: rgb(16 0 79 / 30%) 0 2px 8px 0;
+    transition: background-color 0.4s ease 0s, box-shadow 0.4s ease 0s;
+}
+.final{
+    padding: 3%;
+    width: 100%;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    border-radius: 0 0 10px 10px;
     background-color: rgb(88, 141, 206);
+    box-shadow: rgb(16 0 79 / 30%) 0 2px 8px 0;
+    transition: background-color 0.4s ease 0s, box-shadow 0.4s ease 0s;
 }
 
 .duration{
@@ -128,8 +139,16 @@ header{
 }
 
 @media (min-width: 768px){
-    .product_detail{
-        padding: 40px 90px;
+    .main-detail{
+        padding: 40px 100px;
+    }
+}
+@media (min-width: 1024px){
+    .main-detail{
+        padding: 40px 20%;
+    }
+    .detail{
+        padding: 4% 7%;
     }
 }
 
@@ -170,8 +189,8 @@ footer{
 }
 .main-ul{
     margin-left: 6%;
-    margin-top: 0%;
-    padding-left: 0%;
+    margin-top:  0;
+    padding-left:  0;
 }
 .main-ul li{
     list-style-type: none;
