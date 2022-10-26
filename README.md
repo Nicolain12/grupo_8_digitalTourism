@@ -1,6 +1,6 @@
 # Digital Tourism
-Este sitio web esta destinado a la venta de paquetes de viajes cerrados y personalizados. Se ofrecen dentro de los paquetes el transporte aéreos, alojamiento y pension completa o media pension.
-La pagina esta destinada a todo tipo de publico con necesidades o deseos de viajar.
+Este sitio web está destinado a la venta de paquetes de viajes cerrados y personalizados. Se ofrecen dentro de los paquetes el transporte aéreos, alojamiento y pension completa o media pension.
+La página está destinada a todo tipo de público con necesidades o deseos de viajar.
 
 ## Product backlog
 * [Trello](https://trello.com/b/34tGsZEu/grupo8)
@@ -22,7 +22,7 @@ La pagina esta destinada a todo tipo de publico con necesidades o deseos de viaj
 * Correo: lainnicolas1@gmail.com
 * Linkedin: [Nicolaslain](www.linkedin.com/in/nicolaslain)
 
-## Paginas referentes
+## Páginas referentes
 * https://www.viajesfalabella.cl/
 * https://viajes.travel.cl/
 * https://www.atrapalo.cl/

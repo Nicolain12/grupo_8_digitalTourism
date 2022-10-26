@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/productDetail.css">
     <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/carouselProductDetail.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +18,161 @@
 
     <%- include('../partials/header') %> 
 
-    <main></main>
+    <main class="main-detail">
+        <section class="carousel_section">
+            <div class="container">
+                <div class="carousel">
+                    <input type="radio" name="slides" checked="checked" id="slide-1">
+                    <input type="radio" name="slides" id="slide-2">
+                    <input type="radio" name="slides" id="slide-3">
+                    <input type="radio" name="slides" id="slide-4">
+                    <input type="radio" name="slides" id="slide-5">
+                    <input type="radio" name="slides" id="slide-6">
+                    <ul class="carousel__slides">
+                        <li class="carousel__slide">
+                            <figure>
+                                <div>
+                                    <img src="https://picsum.photos/id/1041/800/450" alt="">
+                                </div>
+                            </figure>
+                        </li>
+                        <li class="carousel__slide">
+                            <figure>
+                                <div>
+                                    <img src="https://picsum.photos/id/1043/800/450" alt="">
+                                </div>
+                            </figure>
+                        </li>
+                        <li class="carousel__slide">
+                            <figure>
+                                <div>
+                                    <img src="https://picsum.photos/id/1044/800/450" alt="">
+                                </div>
+                            </figure>
+                        </li>
+                        <li class="carousel__slide">
+                            <figure>
+                                <div>
+                                    <img src="https://picsum.photos/id/1045/800/450" alt="">
+                                </div>
+                            </figure>
+                        </li>
+                        <li class="carousel__slide">
+                            <figure>
+                                <div>
+                                    <img src="https://picsum.photos/id/1049/800/450" alt="">
+                                </div>
+                            </figure>
+                        </li>
+                        <li class="carousel__slide">
+                            <figure>
+                                <div>
+                                    <img src="https://picsum.photos/id/1052/800/450" alt="">
+                                </div>
+                            </figure>
+                        </li>
+                    </ul>
+                    <ul class="carousel__thumbnails">
+                        <li>
+                            <label for="slide-1"><img src="https://picsum.photos/id/1041/150/150" alt=""></label>
+                        </li>
+                        <li>
+                            <label for="slide-2"><img src="https://picsum.photos/id/1043/150/150" alt=""></label>
+                        </li>
+                        <li>
+                            <label for="slide-3"><img src="https://picsum.photos/id/1044/150/150" alt=""></label>
+                        </li>
+                        <li>
+                            <label for="slide-4"><img src="https://picsum.photos/id/1045/150/150" alt=""></label>
+                        </li>
+                        <li>
+                            <label for="slide-5"><img src="https://picsum.photos/id/1049/150/150" alt=""></label>
+                        </li>
+                        <li>
+                            <label for="slide-6"><img src="https://picsum.photos/id/1052/150/150" alt=""></label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="product_detail">
+            <div class="div-classification">
+                <span class="classification">Detalle ida</span>
+            </div>
+            <section class="detail">
+                <div class="departure_time">
+                    <span>Salida</span>
+                    <span>9:00 </span>
+                    <span>STG</span>
+                </div>
+                <div class="duration">
+                    <span>Duracion</span>
+                    <span>3 h 45 min</span>
+                </div>
+                <div class="time_of_arrival">
+                    <span>Llegada </span>
+                    <span>19:20</span>
+                    <span>LIM</span>
+                </div>
+            </section>
+            <div class="final">
+                <span class="final-detail">Vuelo de ida • 04 dic 2022</span>
+            </div>
+        </section>
+        <section class="product_detail">
+            <div class="div-classification">
+                <span class="classification">Detalle de vuelta</span>
+            </div>
+            <section class="detail">
+                <div class="departure_time">
+                    <span>Salida</span>
+                    <span>9:00 </span>
+                    <span>LIM</span>
+                </div>
+                <div class="duration">
+                    <span>Duracion</span>
+                    <span>3 h 45 min</span>
+                </div>
+                <div class="time_of_arrival">
+                    <span>Llegada </span>
+                    <span>19:20</span>
+                    <span>STG</span>
+                </div>
+            </section>
+            <div class="final">
+                <span class="final-detail">Vuelo de vuelta • 10 dic 2022</span>
+            </div>
+        </section>
+
+
+        <section class="product_detail">
+            <div class="div-classification">
+                <span class="classification">Detalle Hotel</span>
+            </div>
+            <section class="detail">
+                <div class="price">
+                    <span>hotel</span>
+                    <span>CLP 91.865</span>
+                </div>
+            </section>
+        </section>
+
+        <section class="product_detail">
+            <div class="div-classification">
+                <span class="classification">Detalle servicios</span>
+            </div>
+            <section class="detail">
+                <div class="price">
+                    <span>auto</span>
+                    <span>CLP 91.865</span>
+                </div>
+            </section>
+        </section>
+
+
+    </main>
 
     <%- include('../partials/footer') %> 
 

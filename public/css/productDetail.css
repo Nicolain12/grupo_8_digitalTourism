@@ -22,7 +22,7 @@ header{
 }
 
 .div-logo a{
-    width: 100%; 
+    width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -43,7 +43,7 @@ header{
 }
 .div-pages ul{
     width: 100%;
-    padding-left: 0px;
+    padding-left: 0;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -64,7 +64,7 @@ header{
 .div-i-1, .div-i-2{
     width: 30%;
     display: flex;
-} 
+}
 .div-links div a i{
     font-size: 30px;
     color: white;
@@ -78,6 +78,87 @@ header{
 .burger-menu a i{
     color: white;
     font-size: 30px;
+}
+
+/*MAIN*/
+.main-detail{
+    display: flex;
+    padding: 40px 20px;
+}
+.product_detail{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 20px 0;
+}
+.detail {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    opacity: revert;
+    padding: 3% 7%;
+    width: 100%;
+    box-shadow: rgb(16 0 79 / 30%) 0 2px 8px 0;
+    transition: background-color 0.4s ease 0s, box-shadow 0.4s ease 0s;
+    background-color: rgb(255, 255, 255);
+}
+.detail div {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-grow: 4;
+}
+.div-classification{
+    padding: 2% 3%;
+    width: 100%;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    border-radius: 10px 10px 0  0;
+    background-color: #2155CD;
+    box-shadow: rgb(16 0 79 / 30%) 0 2px 8px 0;
+    transition: background-color 0.4s ease 0s, box-shadow 0.4s ease 0s;
+}
+.final{
+    padding: 2% 3%;
+    width: 100%;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    border-radius: 0 0 10px 10px;
+    background-color: rgb(88, 141, 206);
+    box-shadow: rgb(16 0 79 / 30%) 0 2px 8px 0;
+    transition: background-color 0.4s ease 0s, box-shadow 0.4s ease 0s;
+}
+
+.duration{
+    display: flex;
+    align-items:center;
+}
+.time_of_arrival{
+    display: flex;
+    align-items:end;
+}
+
+@media (min-width: 768px){
+    .main-detail{
+        padding: 40px 100px;
+    }
+}
+@media (min-width: 2560px){
+    .main-detail{
+        padding: 40px 20%;
+    }
+}
+@media (min-width: 1024px){
+    .main-detail{
+        font-size: 20px;
+        padding: 40px 16%;
+    }
+}
+@media (min-width: 1024px){
+    .main-detail{
+        font-size: 25px;
+        padding: 40px 20%;
+    }
 }
 
 /*FOOTER*/
@@ -106,7 +187,7 @@ footer{
     border-radius: 5%;
 }
 .footer-div:hover{
-    box-shadow: 0px 0px 15px rgb(100,100,100);
+    box-shadow: 0 0 15px rgb(100,100,100);
 }
 .footer-div:hover i{
     font-size: 35px;
@@ -117,8 +198,8 @@ footer{
 }
 .main-ul{
     margin-left: 6%;
-    margin-top: 0%;
-    padding-left: 0%;
+    margin-top:  0;
+    padding-left:  0;
 }
 .main-ul li{
     list-style-type: none;
@@ -186,30 +267,30 @@ footer{
 
 @media (min-width: 768px){
     /*HEADER*/
-    
+
         .div-logo a{
-            width: 50%; 
+            width: 50%;
             height: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
         }
-    
+
     /*nav*/
         .div-pages{
             display: flex;
-    
+
         }
-    
+
         .div-links{
            display: flex;
         }
         .burger-menu{
             display: none;
         }
-    
+
     /*FOOTER*/
-    
+
         .footer-div{
             width: 25%;
         }
@@ -221,9 +302,9 @@ footer{
         }
     }
     @media (min-width: 1024px){
-    
+
         .div-logo a{
             width: 121px;
             height: 97px;
-        }   
+        }
     }
