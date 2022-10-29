@@ -1,20 +1,5 @@
 Retrospectiva sobre proyecto basado en la dinamica Estrella de mar:
-
-1. Comenzar a hacer.
-
-    -Reuniones semanales .
-
-2. Hacer más.
-
-    -Seguir mejorando la division de tareas mediante Trello.
-    -Comunicación entre nosotros.
-
-
-3. Continuar haciendo.
-
-    -Seguir utilizando Trello.
-
-4. Hacer menos.
-5. Dejar de hacer.
+Link de Mural:
+https://app.mural.co/invitation/mural/soraimar1581/1667051259326?sender=u3c7d09e74d8574b7cb6b4795&key=b760cc67-3da3-4870-9b1d-95f7db9b1d17
 
 
