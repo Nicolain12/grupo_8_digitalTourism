@@ -1,19 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/index.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap" rel="stylesheet">
-    <title>Digital Tourism Home</title>
-</head>
+    <%- include('partials/head')  %> 
 <body>
     
     <%- include('./partials/header') %> 
@@ -94,26 +81,29 @@
                 <div class="div-filters">
                 <div class="main-select">
                     <select name="" id="">
-                        <option value="none">Elegi una opción</option>
-                        <option value="">1</option>
-                        <option value="">2</option>
-                        <option value="">3</option>
+                        <option value="none">Tipo de Cabina</option>
+                        <option value="">Economy</option>
+                        <option value="">Premium</option>
+                        <option value="">Premium vip</option>
                     </select>
             </div>
                 <div class="main-select">
                     <select name="" id="">
-                        <option value="none">Elegi una opción</option>
-                        <option value="">1</option>
-                        <option value="">2</option>
-                        <option value="">3</option>
+                        <option value="none">Tipo de servicio</option>
+                        <option value="">2 Estrellas</option>
+                        <option value="">3 Estrellas</option>
+                        <option value="">4 Estrellas</option>
+                        <option value="">5 Estrellas</option>
                     </select>
             </div>
                 <div class="main-select">
                     <select name="" id="">
-                        <option value="none">Elegi una opción</option>
+                        <option value="none">Pasajeros</option>
                         <option value="">1</option>
                         <option value="">2</option>
                         <option value="">3</option>
+                        <option value="">4</option>
+                        <option value="">5 o mas</option>
                     </select>
             </div>
                 </div>
@@ -150,7 +140,7 @@
         </div>
         <section class="article-section">
 
-            <article class="main-article">
+            <a href="/product" class="main-article">
                 <div class="div-precio">
                     <p class="precio">$9.999</p>
                 </div>
@@ -163,8 +153,8 @@
                         Fuga quos, quisquam possimus neque nisi eos nam mollitia voluptatibus repudiandae simi,
                         dicta architecto fugit corrupti eius aliquam ex dolor placeat assumenda.</p>
                 </div>                                   
-            </article>     
-            <article class="main-article">
+            </a>     
+            <a href="/product" class="main-article">
                 <div class="div-precio">
                     <p class="precio">$9.999</p>
                 </div>
@@ -177,8 +167,8 @@
                         Fuga quos, quisquam possimus neque nisi eos nam mollitia voluptatibus repudiandae simi,
                         dicta architecto fugit corrupti eius aliquam ex dolor placeat assumenda.</p>
                 </div>                                   
-            </article>  
-            <article class="main-article">
+            </a>  
+            <a href="/product" class="main-article">
                 <div class="div-precio">
                     <p class="precio">$9.999</p>
                 </div>
@@ -191,8 +181,8 @@
                         Fuga quos, quisquam possimus neque nisi eos nam mollitia voluptatibus repudiandae simi,
                         dicta architecto fugit corrupti eius aliquam ex dolor placeat assumenda.</p>
                 </div>                                   
-            </article>  
-            <article class="main-article">
+            </a>  
+            <a href="/product" class="main-article">
                 <div class="div-precio">
                     <p class="precio">$9.999</p>
                 </div>
@@ -205,7 +195,7 @@
                         Fuga quos, quisquam possimus neque nisi eos nam mollitia voluptatibus repudiandae simi,
                         dicta architecto fugit corrupti eius aliquam ex dolor placeat assumenda.</p>
                 </div>                                   
-            </article>  
+            </a>  
         </section>
     </main>
 

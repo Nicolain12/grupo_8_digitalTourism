@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head') %>
+
+<body>
+
+    <%- include('../partials/header') %> 
+
+    <main>
+       <form action="" class="main-form">
+            
+            <div class="main-form-top">
+                <div class="main-from-top-1">
+                    <input type="image" src="img_submit.gif" alt="Submit">
+                </div>
+                <div class="main-from-top-2">
+                    <div class="main-form-div1">
+                        <div class="main-form-div1-origen">
+                            <label class="main-form-div1-label" for="Origen-edit"><i class="fa-solid fa-plane-departure"></i></label>
+                            <input class="main-form-div1-input" type="text" id="Origen-edit" name="Origen-edit" placeholder="Origen">
+                        </div>
+                        <div class="main-form-div1-edit">
+                            <label class="main-form-div1-label" for="destino-edit"><i class="fa-solid fa-location-dot"></i></label>
+                            <input class="main-form-div1-input" type="text" id="destino-edit" name="destino-edit" placeholder="Destino">
+                        </div>
+                    </div>
+                    <div class="main-form-div2">
+                        <label class="main-form-div2-label" for="descripcion-edit">Descripcion del producto</label>
+                        <input class="main-form-div2-input" type="text" id="descripcion-edit" name="descripcion-edit">
+                    </div>
+                    <div class="main-form-div3">
+                        <div class="main-select">
+                            <select name="" id="">
+                                <option value="none">Tipo de Cabina</option>
+                                <option value="">Economy</option>
+                                <option value="">Premium</option>
+                                <option value="">Premium vip</option>
+                            </select>
+                    </div>
+                        <div class="main-select">
+                            <select name="" id="">
+                                <option value="none">Tipo de servicio</option>
+                                <option value="">2 Estrellas</option>
+                                <option value="">3 Estrellas</option>
+                                <option value="">4 Estrellas</option>
+                                <option value="">5 Estrellas</option>
+                            </select>
+                    </div>
+                    </div>
+                    <div class="main-form-div4">
+                        <label class="main-form-div3-label" for="precio-cu-edit">Precio por persona</label>
+                        <input class="main-form-div3-input" type="number" id="precio-cu-edit" name="precio-cu-edit" placeholder="$">
+                    </div>
+                </div>
+            </div>
+            <div class="main-form-bottom">
+                <button class="btn btn-primary" type="submit" name="" id="">Editar</button>
+            </div>
+
+       </form>
+    </main>
+
+    <%- include('../partials/footer') %> 
+
+</body>
+</html>

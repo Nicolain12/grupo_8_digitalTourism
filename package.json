@@ -4,8 +4,11 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js", 
     "dev": "nodemon app.js",
-    "start": "node app.js"
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix",
+    "lint:format": "prettier --loglevel warn --write ."
   },
   "repository": {
     "type": "git",
@@ -22,12 +25,12 @@
     "express": "4.18.2"
   },
   "devDependencies": {
-    "eslint": "^8.26.0",
-    "eslint-config-standard": "^17.0.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-n": "^15.3.0",
-    "eslint-plugin-promise": "^6.1.1",
-    "nodemon": "^2.0.20",
+    "eslint": "8.26.0",
+    "eslint-config-standard": "17.0.0",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-n": "15.3.0",
+    "eslint-plugin-promise": "6.1.1",
+    "nodemon": "2.0.20",
     "prettier": "2.7.1"
   }
 }
