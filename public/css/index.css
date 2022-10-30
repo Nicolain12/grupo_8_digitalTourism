@@ -701,28 +701,23 @@ footer{
     align-items:end;
 }
 
+#product-editProduct-a{
+    display: flex;
+    justify-content: flex-end;
+}
+#product-editProduct-a a{
+    width: 150px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #0d6efd;
+    border-radius: 5px;
+    color: white;
+}
+
 @media (min-width: 768px){
     .main-detail{
         padding: 40px 100px;
     }
-}
-@media (min-width: 2560px){
-    .main-detail{
-        padding: 40px 20%;
-    }
-}
-@media (min-width: 1024px){
-    .main-detail{
-        font-size: 20px;
-        padding: 40px 16%;
-    }
-}
-@media (min-width: 1024px){
-    .main-detail{
-        font-size: 25px;
-        padding: 40px 20%;
-    }
-}
 
 
 /* CUSTOMPRODUCT.EJS */
@@ -871,62 +866,176 @@ footer{
 
 /* EDITPRODUCT.EJS */
 
-.main-form{
+.main-form-edit{
     width: 100%;
     background: #24303c;
-    padding: 30px;
-    margin: auto;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    border-radius: 4px;
-    font-family: 'calibri';
     color: white;
-    box-shadow: 7px 13px 37px #000;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 .main-form-top{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-.main-form-bottom{
-    margin-top: 5%;
-    text-align: center;
+
 }
 .main-from-top-1{
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 5%;
+    text-align: center;
+    margin-top: 5%;
 }
+.main-from-top-1 input{
+    margin-top: 5%;
+    display: none;
+}
+
+#circle{
+    font-size: 48px;
+}
+
 .main-from-top-2{
-    width: 70%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 .main-form-div1{
     display: flex;
-    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.main-form-div1-origen{
+    width: 50%;
+    margin-top: 5%;
+    margin-left: 2%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-form-div1-edit{
+    width: 50%;
+    margin-top: 5%;
+    margin-left: 2%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-form-div1-input{
+    height: 40px;
+    margin-top: 5%;
+    border-radius: 5px;
+}
+
+.main-form-div2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.main-form-div2-label{
+    margin-top: 5%;
+    margin-left: 2%;
+}
+
+.main-form-div2-input{
+    width: 90%;
+    margin-left: 5%;
+    height: 200px;
+    margin-top: 2%;
+    border-radius: 5px;
+}
+
+
+
+.main-form-div3{
+    display: flex;
     justify-content: space-around;
-    align-items: center;
+}
+
+.main-select-edit{
+    width: 140px;
+    height: 100%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.main-select-edit select{
+    color: white;
+    background-color: #24303c;
+    border: none;
+}
+.main-form-div4{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.main-form-div4-label{
+    margin-top: 5%;
+    margin-left: 2%;
+}
+
+.main-form-div4-input{
+    height: 40px;
+    width: 20%;
+    margin-left: 5%;
+    margin-top: 5%;
+    border-radius: 5px;
+}
+
+
+.main-form-bottom{
+    text-align: center;
+    margin-top: 5%;
 }
 
 @media (min-width: 768px){
-    .main-form{
-        width: 80%;
+    .main-form-div1{
+        flex-direction: row;
+        justify-content: space-around;
     }
+    #circle{
+        font-size: 96px;
+    }
+    .main-form-div1-origen, .main-form-div1-edit{
+        width: 40%;
+    }
+    .main-select-edit select{
+        font-size: 18px;
+    }
+
+}
+@media (min-width: 1024px){
     .main-form-top{
         flex-direction: row;
     }
     .main-from-top-1{
-        width: 20%;
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-}
-@media (min-width: 1024px){
-    .main-form{
-        width: 60%;
+    .bigest-vertion{
+        display: flex;
+        justify-content: space-around;
+    }
+    .main-form-div2{
+        width: 70%;
+    }
+    .main-form-div3{
+        width: 20%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-select-edit{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .main-form-div4-label {
+        margin-left: 5%;
+    }
+    .main-form-bottom{
+        width: 70%;
+        margin-left: auto;
+    }
+    .main-form-bottom button{
+
     }
 }
