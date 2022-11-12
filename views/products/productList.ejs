@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head')  %> 
+<body>
+    <%- include('../partials/header') %> 
+    
+    <main>
+        <section class="section-article">
+            <% for(let product of products) { %>
+            <article class="package-article">
+                <a href="/products/product/<%= product.id %>" style="text-decoration: none; color: #000;">
+                    <img class="article-img" src="/images/logo2.jpg" alt=""> 
+                <div class="info-div">
+                    <div class="info-top">
+                        <div class="title-art">
+                            <h4><%= product.origen %>  ---> <%= product.destino %></h4>
+                        </div>
+                        <div class="article-text">
+                            <p class="">Hotel: <%= product.descripcionHotel %></p>
+                            <p class="">Servicio: <%= product.descripcionServicio %></p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-bottom">
+                        <div class="add-cart-div">
+                            <div class="precio-info">
+                                <p>$<%= product.precio %></p>
+                            </div>
+                            <a id="plane-unclicked" href=""><i class="fa-solid fa-plane-up"></i></a>
+                        </div>
+                    </div>
+                </div> 
+                </a>
+            </article>
+            <% } %>
+        </section>
+            
+        </section>
+        
+    </main>
+
+    <%- include('../partials/footer') %> 
+</body>
+</html>

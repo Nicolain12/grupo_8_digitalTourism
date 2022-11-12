@@ -138,65 +138,36 @@
         <div class="title-div">
             <h2 class="articles-title">Paquetes mas comprados</h2>
         </div>
-        <section class="article-section">
-
-            <a href="/product" class="main-article">
-                <div class="div-precio">
-                    <p class="precio">$9.999</p>
-                </div>
-                <img src="/images/logo2.jpg" alt=""> 
-                <div class="div-viaje">
-                    <h4 class="viaje">De ++++ A ++++</h4>
-                </div>
-                <div class="div-descripcion">
-                    <p class="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Fuga quos, quisquam possimus neque nisi eos nam mollitia voluptatibus repudiandae simi,
-                        dicta architecto fugit corrupti eius aliquam ex dolor placeat assumenda.</p>
-                </div>                                   
-            </a>     
-            <a href="/product" class="main-article">
-                <div class="div-precio">
-                    <p class="precio">$9.999</p>
-                </div>
-                <img src="/images/logo2.jpg" alt=""> 
-                <div class="div-viaje">
-                    <h4 class="viaje">De ++++ A ++++</h4>
-                </div>
-                <div class="div-descripcion">
-                    <p class="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Fuga quos, quisquam possimus neque nisi eos nam mollitia voluptatibus repudiandae simi,
-                        dicta architecto fugit corrupti eius aliquam ex dolor placeat assumenda.</p>
-                </div>                                   
-            </a>  
-            <a href="/product" class="main-article">
-                <div class="div-precio">
-                    <p class="precio">$9.999</p>
-                </div>
-                <img src="/images/logo2.jpg" alt=""> 
-                <div class="div-viaje">
-                    <h4 class="viaje">De ++++ A ++++</h4>
-                </div>
-                <div class="div-descripcion">
-                    <p class="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Fuga quos, quisquam possimus neque nisi eos nam mollitia voluptatibus repudiandae simi,
-                        dicta architecto fugit corrupti eius aliquam ex dolor placeat assumenda.</p>
-                </div>                                   
-            </a>  
-            <a href="/product" class="main-article">
-                <div class="div-precio">
-                    <p class="precio">$9.999</p>
-                </div>
-                <img src="/images/logo2.jpg" alt=""> 
-                <div class="div-viaje">
-                    <h4 class="viaje">De ++++ A ++++</h4>
-                </div>
-                <div class="div-descripcion">
-                    <p class="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Fuga quos, quisquam possimus neque nisi eos nam mollitia voluptatibus repudiandae simi,
-                        dicta architecto fugit corrupti eius aliquam ex dolor placeat assumenda.</p>
-                </div>                                   
-            </a>  
+        <section class="section-article">
+            <% for(let product of onSale) { %>
+            <article class="package-article">
+                <a href="/products/product/<%= product.id %>" style="text-decoration: none; color: #000;">
+                    <img class="article-img" src="/images/logo2.jpg" alt=""> 
+                <div class="info-div">
+                    <div class="info-top">
+                        <div class="title-art">
+                            <h4><%= product.origen %>  ---> <%= product.destino %></h4>
+                        </div>
+                        <div class="article-text">
+                            <p class="">Hotel: <%= product.descripcionHotel %></p>
+                            <p class="">Servicio: <%= product.descripcionServicio %></p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-bottom">
+                        <div class="add-cart-div">
+                            <div class="precio-info">
+                                <p>$<%= product.precio %></p>
+                            </div>
+                            <a id="plane-unclicked" href=""><i class="fa-solid fa-plane-up"></i></a>
+                        </div>
+                    </div>
+                </div> 
+                </a>
+            </article>
+            <% } %>
         </section>
+
     </main>
 
     <%- include('./partials/footer') %> 

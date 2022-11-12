@@ -1,4 +1,8 @@
-const path = require('path')
+const fs = require('fs');
+const path = require('path');
+
+const productsFilePath = path.join(__dirname, '../dataBase/product.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const productsController = {
     products: (req, res) =>{
@@ -8,7 +12,8 @@ const productsController = {
         res.render('./products/customProduct')
     },
     product: (req, res) =>{
-        res.render('./products/product')
+        let product = products.find(element => element.id == req.params.id)
+        res.render('./products/product', {product: product})
     },
     productCart: (req, res) =>{
         res.render('./products/productCart')
@@ -19,6 +24,10 @@ const productsController = {
     submitProduct: (req, res) =>{
         res.render('./products/submitProduct')
     },
+    productList: (req, res) => {
+        res.render('./products/ProductList', {products:products})
+
+    }
 }
 
 module.exports = productsController

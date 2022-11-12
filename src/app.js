@@ -2,7 +2,6 @@ const express = require('express')
 const path = require('path')
 const app = express()
 
-
 //routes requires
 const indexRoutes = require('./routes/index.js')
 const usersRoutes = require('./routes/users.js')
