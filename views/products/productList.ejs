@@ -13,18 +13,17 @@
                 <div class="info-div">
                     <div class="info-top">
                         <div class="title-art">
-                            <h4><%= product.origen %>  ---> <%= product.destino %></h4>
+                            <h4><%= product.Departure %>  ---> <%= product.Reach %></h4>
                         </div>
                         <div class="article-text">
-                            <p class="">Hotel: <%= product.descripcionHotel %></p>
-                            <p class="">Servicio: <%= product.descripcionServicio %></p>
+                            <p class=""><%= product.description %></p>
                         </div>
                     </div>
                     
                     <div class="info-bottom">
                         <div class="add-cart-div">
                             <div class="precio-info">
-                                <p>$<%= product.precio %></p>
+                                <p>$<%= product.price %></p>
                             </div>
                             <a id="plane-unclicked" href=""><i class="fa-solid fa-plane-up"></i></a>
                         </div>

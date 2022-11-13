@@ -7,7 +7,7 @@
     <%- include('../partials/header') %> 
 
     <main>
-       <form action="" class="main-form-edit">
+       <form action="/products/products" method="POST" class="main-form-edit">
             
             <div class="main-form-top">
                 <div class="main-from-top-1">
@@ -17,59 +17,104 @@
                 <div class="main-from-top-2">
                     <div class="main-form-div1">
                         <div class="main-form-div1-origen">
-                            <label class="main-form-div1-label" for="Origen-edit"><i class="fa-solid fa-plane-departure"></i></label>
-                            <input class="main-form-div1-input" type="text" id="Origen-edit" name="Origen-edit" placeholder="Origen">
+                            <label class="main-form-div1-label" for="departure"><i class="fa-solid fa-plane-departure"></i></label>
+                            <input class="main-form-div1-input" type="text" id="departure" name="departure" placeholder="Origen">
                         </div>
                         <div class="main-form-div1-edit">
-                            <label class="main-form-div1-label" for="destino-edit"><i class="fa-solid fa-location-dot"></i></label>
-                            <input class="main-form-div1-input" type="text" id="destino-edit" name="destino-edit" placeholder="Destino">
+                            <label class="main-form-div1-label" for="reach"><i class="fa-solid fa-location-dot"></i></label>
+                            <input class="main-form-div1-input" type="text" id="reach" name="reach" placeholder="Destino">
                         </div>
                     </div>
 
                     <div class="main-form-div1">
                         <div class="main-form-div1-origen">
-                            <label class="main-form-div1-label" for="fecha-ida-edit">Fecha ida</label>
-                            <input class="main-form-div1-input" type="date" id="fecha-ida-edit" name="fecha-ida-edit" >
+                            <label class="main-form-div1-label" for="date-departure">Fecha ida</label>
+                            <input class="main-form-div1-input" type="date" id="date-departure" name="date-departure" >
                         </div>
                         <div class="main-form-div1-edit">
-                            <label class="main-form-div1-label" for="fecha-vuelta-edit">Fecha vuelta</label>
-                            <input class="main-form-div1-input" type="date" id="fecha-vuelta-edit" name="fecha-vuelta-edit">
+                            <label class="main-form-div1-label" for="date-reach">Fecha vuelta</label>
+                            <input class="main-form-div1-input" type="date" id="date-reach" name="date-reach">
+                        </div>
+                    </div>
+
+                    <div class="main-form-div1">
+                        <div class="main-form-div1-origen">
+                            <label class="main-form-div1-label" for="hour-departure">Hora ida</label>
+                            <input class="main-form-div1-input" type="time" id="hour-departure" name="hour-departure" >
+                        </div>
+                        <div class="main-form-div1-edit">
+                            <label class="main-form-div1-label" for="hour-reach">Hora vuelta</label>
+                            <input class="main-form-div1-input" type="time" id="hour-reach" name="hour-reach">
+                        </div>
+                    </div>
+
+                    <div class="main-form-div1">
+                        <div class="main-form-div1-origen">
+                            <label class="main-form-div1-label" for="hotel">Hotel</label>
+                            <input class="main-form-div1-input" type="text" id="hotel" name="hotel" >
+                        </div>
+                        <div class="main-form-div1-edit">
+                            <select class="select-passemgers" name="passengers" id="">
+                                <option value="none">Cantidad de pasajeros</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="main-form-div1">
+                        <div class="main-form-div1-origen">
+                            <label class="main-form-div1-label" for="price">Precio por persona</label>
+                            <input class="main-form-div1-input" type="number" id="price" name="price" >
+                        </div>
+                        <div class="main-form-div1-edit">
+                            <label>Oferta</label>
+                            <div class="onsale-div">
+                                <div class="onsale-div-2">
+                                    <label class="main-form-div1-label" for="">Si</label>
+                                    <input type="checkbox" name="onSale" value="true" id="">
+                                </div>
+                                <div class="onsale-div-2">
+                                    <label class="main-form-div1-label" for="">No</label>
+                                    <input type="checkbox" name="onSale" value="false" id="">
+                                </div>
+                            </div>
+                            
                         </div>
                     </div>
 
                     <div class="bigest-vertion">
                         <div class="main-form-div2">
-                        <label class="main-form-div2-label" for="descripcion-edit">Descripcion del producto</label>
-                        <input class="main-form-div2-input" type="text" id="descripcion-edit" name="descripcion-edit">
+                        <label class="main-form-div2-label" for="description">Descripcion del producto</label>
+                        <input class="main-form-div2-input" type="text" id="description" name="description">
                         </div>
                         <div class="main-form-div3">
                         <div class="main-select-edit">
-                            <select name="" id="">
+                            <select name="cabin" id="">
                                 <option value="none">Tipo de Cabina</option>
-                                <option value="">Economy</option>
-                                <option value="">Premium</option>
-                                <option value="">Premium vip</option>
+                                <option value="economy">Economy</option>
+                                <option value="premium">Premium</option>
+                                <option value="premium-vip">Premium vip</option>
                             </select>
                     </div>
                         <div class="main-select-edit">
-                            <select name="" id="">
+                            <select name="service" id="">
                                 <option value="none">Tipo de servicio</option>
-                                <option value="">2 Estrellas</option>
-                                <option value="">3 Estrellas</option>
-                                <option value="">4 Estrellas</option>
-                                <option value="">5 Estrellas</option>
+                                <option value="2">2 Estrellas</option>
+                                <option value="3">3 Estrellas</option>
+                                <option value="4">4 Estrellas</option>
+                                <option value="5">5 Estrellas</option>
                             </select>
                     </div>
                         </div>
-                    </div>
-                    <div class="main-form-div4">
-                        <label class="main-form-div4-label" for="precio-cu-edit">Precio por persona:</label>
-                        <input class="main-form-div4-input" type="number" id="precio-cu-edit" name="precio-cu-edit" placeholder="$">
                     </div>
                 </div>
             </div>
             <div class="main-form-bottom">
-                <button class="btn btn-primary" type="submit" name="" id="">Crear</button>
+                <button class="btn btn-primary" type="submit">Crear</button>
             </div>
 
        </form>

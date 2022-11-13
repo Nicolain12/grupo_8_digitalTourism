@@ -25,6 +25,7 @@ router.get('/productCart', productsController.productCart)
 router.get('/editProduct', productsController.editProduct)
 
 router.get('/submitProduct', productsController.submitProduct)
+router.post('/products', productsController.store); 
 
 router.get('/productList', productsController.productList)
 

@@ -593,7 +593,7 @@ footer{
 /* REGISTER.EJS */
 
 .form-register {
-    width: 400px;
+    width: 100%;
     background: #24303c;
     padding: 30px;
     margin: auto;
@@ -649,11 +649,15 @@ footer{
     margin: 30px 0;
     font-size: 16px;
   }
-
+@media (min-width: 400px){
+  .form-register{
+    width: 400px;
+}
+}
   /* LOGIN.EJS */
 
   .form-login {
-    width: 400px;
+    width: 100%;
     background: #24303c;
     padding: 30px;
     margin: auto;
@@ -783,10 +787,16 @@ footer{
     color: white;
 }
 
+@media (min-width: 400px){
+    .form-login{
+        width: 400px;
+    }
+}
 @media (min-width: 768px){
     .main-detail{
         padding: 40px 100px;
     }
+    
 }
 
 /* CUSTOMPRODUCT.EJS */
@@ -1030,24 +1040,25 @@ footer{
     background-color: #24303c;
     border: none;
 }
-.main-form-div4{
+.select-passemgers{
+    color: white;
+    background-color: #24303c;
+    border: none;
+    margin-top: 15%;
+}
+
+.onsale-div{
     display: flex;
-    justify-content: flex-start;
-}
-
-.main-form-div4-label{
+    justify-content: space-around;
+    flex-wrap: wrap;
     margin-top: 5%;
-    margin-left: 2%;
 }
-
-.main-form-div4-input{
-    height: 40px;
-    width: 20%;
+.onsale-div-2{
+    width: 40%;
+}
+.onsale-div-2 input{
     margin-left: 5%;
-    margin-top: 5%;
-    border-radius: 5px;
 }
-
 
 .main-form-bottom{
     text-align: center;
@@ -1067,6 +1078,9 @@ footer{
     }
     .main-select-edit select{
         font-size: 18px;
+    }
+    .select-passemgers{
+        width: 60%;
     }
 
 }
