@@ -78,8 +78,8 @@ header{
 }
 .div-pages ul{
     width: 100%;
-    padding-left: 0px;
-    margin-bottom: 0%;
+    padding-left: 0;
+    margin-bottom: 0;
     display: flex;
     justify-content: space-around;
     align-items: baseline;
@@ -261,28 +261,28 @@ main{
     justify-content: space-around;
 }
 .index-package-article{
- 
+
 }
 .index-package-article:hover{
-   
+
 }
 
 .index-article-img{
-  
+
 
 }
 .index-info-div{
-  
+
 }
 
 .index-info-top{
-    
+
 }
 .index-title-art{
-   
+
 }
 .index-title-art h4{
-   
+
 }
 .index-article-text{
 
@@ -329,6 +329,7 @@ footer{
 }
 .item{
     list-style: none;
+    padding: 0;
 }
 .footer{
     background-color: #2155CD;
@@ -405,11 +406,11 @@ footer{
         width: 100%;
     }
 }
-/*aca terrmina eel new footer*/
+/*END FOOTER*/
 .main-ul{
     margin-left: 6%;
-    margin-top: 0%;
-    padding-left: 0%;
+    margin-top: 0;
+    padding-left: 0;
 }
 .main-ul li{
     list-style-type: none;
@@ -517,7 +518,7 @@ footer{
     .section-nav{
         width: 80%;
         border-radius: 20px;
-        box-shadow: 0px 0px 10px rgb(100,100,100);
+        box-shadow: 0 0 10px rgb(100,100,100);
     }
     .busca-paquete{
     display: flex;
@@ -527,8 +528,8 @@ footer{
         margin-left: 10%;
         height: 30px;
         width: 300px;
-        margin-top: 0px;
-        margin-bottom: 0px;
+        margin-top: 0;
+        margin-bottom: 0;
         position: relative;
         bottom: 15px;
         background-color: aliceblue;
@@ -560,15 +561,6 @@ footer{
 
 /*FOOTER*/
 
-    .footer-div{
-        width: 25%;
-    }
-    .contacta{
-        width: 40%;
-    }
-    .descarga{
-        width: 40%;
-    }
 }
 @media (min-width: 1024px){
     #carouselExampleDark{
@@ -796,7 +788,7 @@ footer{
     .main-detail{
         padding: 40px 100px;
     }
-    
+
 }
 
 /* CUSTOMPRODUCT.EJS */
@@ -853,9 +845,9 @@ footer{
 }
 .package-article{
     text-decoration: none;
-    margin: 4% 0%;
+    margin: 4% 0;
     background-color: white;
-    box-shadow: 0px 0px 10px rgb(100,100,100);
+    box-shadow: 0 0 10px rgb(100,100,100);
     border-radius: 20px;
     width: 80%;
     display: flex;
@@ -910,7 +902,7 @@ footer{
 }
 .precio-info p{
     font-size: 20px;
-    margin: 0%;
+    margin: 0;
 }
 #plane-unclicked{
     margin-right: 5%;
