@@ -90,7 +90,7 @@
             </div>
             <section class="detail">
                 <div class="departure_time">
-                    <label><%=product.origen%></label>
+                    <label></label>
                     <label>9:00 </label>
                     <label>STG</label>
                 </div>
@@ -99,7 +99,7 @@
                     <label>3 h 45 min</label>
                 </div>
                 <div class="time_of_arrival">
-                    <label><%=product.destino%></label>
+                    <label></label>
                     <label>19:20</label>
                     <label>LIM</label>
                 </div>
@@ -114,7 +114,7 @@
             </div>
             <section class="detail">
                 <div class="departure_time">
-                    <label><%=product.destino%></label>
+                    <label></label>
                     <label>9:00 </label>
                     <label>LIM</label>
                 </div>
@@ -123,7 +123,7 @@
                     <label>3 h 45 min</label>
                 </div>
                 <div class="time_of_arrival">
-                    <label><%=product.origen%></label>
+                    <label></label>
                     <label>19:20</label>
                     <label>STG</label>
                 </div>
@@ -157,9 +157,15 @@
                 </div>
             </section>
         </section>
-        <section id="product-editProduct-a">
-            <a href="/editProduct">Editar producto</a>    
-        </section>
+        
+        <div class="action-buttons">
+            <section id="product-editProduct-a">
+                <a href="/products/<%= product.id %>/edit">Editar producto</a>    
+            </section>
+            <form class="product-editProduct-a-del" action="/products/<%= product.id %>?_method=DELETE" method="POST">
+                <button type="submit">DELETE</button>
+            </form>
+        </div>
 
 
     </main>

@@ -7,11 +7,11 @@
     <%- include('../partials/header') %> 
 
     <main>
-       <form action="/products/products" method="POST" class="main-form-edit">
+       <form action="/products/products" method="POST" enctype="multipart/form-data" class="main-form-edit">
             
             <div class="main-form-top">
                 <div class="main-from-top-1">
-                    <input type="file" id="input-file-edit" name=""  required>
+                    <input type="file" id="input-file-edit" name="productFile"  required>
                     <label for="input-file-edit" ><i id="circle" class="fa-solid fa-image"></i></label>
                 </div>
                 <div class="main-from-top-2">
@@ -28,23 +28,23 @@
 
                     <div class="main-form-div1">
                         <div class="main-form-div1-origen">
-                            <label class="main-form-div1-label" for="date-departure">Fecha ida</label>
-                            <input class="main-form-div1-input" type="date" id="date-departure" name="date-departure" >
+                            <label class="main-form-div1-label" for="dateDeparture">Fecha ida</label>
+                            <input class="main-form-div1-input" type="date" id="dateDeparture" name="dateDeparture" >
                         </div>
                         <div class="main-form-div1-edit">
-                            <label class="main-form-div1-label" for="date-reach">Fecha vuelta</label>
-                            <input class="main-form-div1-input" type="date" id="date-reach" name="date-reach">
+                            <label class="main-form-div1-label" for="dateReach">Fecha vuelta</label>
+                            <input class="main-form-div1-input" type="date" id="dateReach" name="dateReach">
                         </div>
                     </div>
 
                     <div class="main-form-div1">
                         <div class="main-form-div1-origen">
-                            <label class="main-form-div1-label" for="hour-departure">Hora ida</label>
-                            <input class="main-form-div1-input" type="time" id="hour-departure" name="hour-departure" >
+                            <label class="main-form-div1-label" for="hourDeparture">Hora ida</label>
+                            <input class="main-form-div1-input" type="time" id="hourDeparture" name="hourDeparture" >
                         </div>
                         <div class="main-form-div1-edit">
-                            <label class="main-form-div1-label" for="hour-reach">Hora vuelta</label>
-                            <input class="main-form-div1-input" type="time" id="hour-reach" name="hour-reach">
+                            <label class="main-form-div1-label" for="hourReach">Hora vuelta</label>
+                            <input class="main-form-div1-input" type="time" id="hourReach" name="hourReach">
                         </div>
                     </div>
 

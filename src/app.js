@@ -15,12 +15,17 @@ app.use(methodOverride ("_method"))
 const publicPath = path.resolve(__dirname, '../public')
 app.use(express.static(publicPath))
 
+app.use(express.urlencoded({extended:false}))
+
 //ejs
 app.set('view engine', 'ejs')
 
 // port
 const PORT = process.env.PORT || 3000
-app.listen(PORT, () => console.log(`Servidor corriendo en el puerto ${PORT}`))
+app.listen(PORT, () => {
+    console.log(`Servidor corriendo en el puerto ${PORT}`)
+    console.log('http://localhost:3000/')
+})
 
 //uses
 app.use('/', indexRoutes)

@@ -766,17 +766,57 @@ footer{
     align-items:end;
 }
 
-#product-editProduct-a{
+.action-buttons{
+    width: 100%;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+#product-editProduct-a, .product-editProduct-a-del{
+    width: 130px;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#product-editProduct-a a:hover{
+    background-color: cornflowerblue;
+    box-shadow: 0 0 10px rgb(100,100,100);
 }
 #product-editProduct-a a{
-    width: 150px;
+    width: 100%;
     text-align: center;
     text-decoration: none;
     background-color: #0d6efd;
     border-radius: 5px;
+    font-size: 16px;
     color: white;
+    transition: all, 0,5s;
+}
+.product-editProduct-a-del button:hover{
+    background-color:#e91e63;
+    box-shadow: 0 0 10px rgb(100,100,100);
+}
+.product-editProduct-a-del button{
+    width: 90%;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: white;
+    background-color: red;
+    transition: all, 0,5s;
+
+}
+
+
+@media (min-width: 346px){
+    #product-editProduct-a, .product-editProduct-a-del {
+        width: 40%;
+        height: 90%;
+    }
 }
 
 @media (min-width: 400px){
@@ -788,7 +828,12 @@ footer{
     .main-detail{
         padding: 40px 100px;
     }
-
+    #product-editProduct-a a{
+        font-size: 22px;
+    }
+    .product-editProduct-a-del button{
+        font-size: 22px;
+    }
 }
 
 /* CUSTOMPRODUCT.EJS */
@@ -858,7 +903,11 @@ footer{
     box-shadow: 0px 0px 50px rgb(100,100,100);
 }
 
+.package-article a{
+    text-align: center;
+}
 .article-img{
+    width: 90%;
     margin: 1%;
     border-radius: 20px;
 
@@ -877,12 +926,15 @@ footer{
     width: 100%;
 }
 .title-art h4{
+    text-align: left;
     margin: 1% 0 1% 2%;
 }
 .article-text{
     width: 100%;
 }
 .article-text p{
+    text-align: left;
+    width: 90%;
     margin: 2%;
 }
 
@@ -893,7 +945,10 @@ footer{
     width: 100%;
     justify-self: end;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+}
+.add-cart-div a{
+    margin: 2% 4%;
 }
 .precio-info{
     display: flex;
@@ -927,12 +982,39 @@ footer{
 @media (min-width: 768px){
     .section-article article{
         flex-direction: row;
+        justify-content: space-around
     }
     .gigant-carousel{
         display: flex;
     }
-}
 
+    .package-article a{
+        width: 35%;
+    }
+    .article-img{
+        width: 100%;
+    }
+    .info-div{
+        width: 50%; 
+    }
+    .info-div a{
+        width: 100%;
+    }
+    .info-top{
+        justify-content: center;
+    }
+    #plane-unclicked{
+        text-align: right;
+    }
+    .precio-info p, #plane-unclicked i{
+        font-size: 28px;
+    }
+}
+@media (min-width: 1024px){
+    .precio-info p, #plane-unclicked i{
+        font-size: 36px;
+    }
+}
 
 
 /* EDITPRODUCT.EJS */

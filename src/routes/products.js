@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const productsController = require('../controllers/productsController')
+const path = require('path');
 
 const multer = require('multer');
 const storage = multer.diskStorage({
@@ -8,25 +9,37 @@ const storage = multer.diskStorage({
         let folder = path.join(__dirname, '../../public/images/products')
         cb(null, folder)
     },
-    filename: function (reg, file, cb) {
-        let imageName ='products-' +  Date.now() + '-' + path.extname(file.originalname)
+    filename: function (req, file, cb) {
+        let imageName ='products-' +  Date.now() + path.extname(file.originalname)
         cb(null, imageName)
     }
 })
 const upload = multer({ storage: storage })
 
-router.get('/', productsController.products)
+//List of products
+router.get('/', productsController.productList)
+router.get('/Onsale', productsController.onSale)
+
+//Personalize your product
 router.get('/customProduct', productsController.customProduct)
 
-router.get('/product/:id', productsController.product)
+//specific product
+router.get('/detail/:id', productsController.product)
 
+
+//Product cart
 router.get('/productCart', productsController.productCart)
 
-router.get('/editProduct', productsController.editProduct)
+//Edit product
+router.get('/:id/edit', productsController.editProduct)
+router.put('/:id', upload.single('productFile'), productsController.upload)
 
+// Add new product
 router.get('/submitProduct', productsController.submitProduct)
-router.post('/products', productsController.store); 
+router.post('/products', upload.single('productFile'), productsController.store); 
 
-router.get('/productList', productsController.productList)
+//Delete one product
+router.delete('/:id', productsController.deleteProduct)
+
 
 module.exports = router
