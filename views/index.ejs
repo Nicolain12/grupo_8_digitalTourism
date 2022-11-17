@@ -6,73 +6,26 @@
     <%- include('./partials/header') %> 
 
     <main>
-        <div class="desplegable-div">
 
-            <div id="desplegable" class="d-flex flex-column flex-shrink-0 bg-light" style="width: 4.5rem;">
-                    <a href="/products/productCart" class="cart-desplegable">
-                        <i class="fa-solid fa-plane-up"></i>
-                    </a>
-                    <a href="/products/customProduct" class="cart-desplegable">
-                        <i class="fa-solid fa-pen-to-square"></i>
-                    </a>
-                    <a href="/products/productList" class="cart-desplegable">
-                        <i class="fa-solid fa-cart-flatbed-suitcase"></i>
-                    </a>
-                    <a href="/products/producOnsale" class="cart-desplegable">
-                        <i class="fa-solid fa-fire"></i>
-                    </a>
-                <div class="dropdown border-top">
-                  <a href="#" class="d-flex align-items-center justify-content-center p-3 link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="https://github.com/mdo.png" alt="mdo" width="24" height="24" class="rounded-circle">
-                  </a>
-                  <ul class="dropdown-menu text-small shadow">
-                    <li><a class="dropdown-item" href="#">Profile</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Sign out</a></li>
-                  </ul>
-                </div>
-              </div>
 
-        </div>
-        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+
+      <div class="content-carrusel">
+        <% for(let product of products) { %>
+
+          <div class="item-carrusel" id="item-carrusel-<%= product.id %>">
+            <div class="item-image">
+              <a href="/products/detail/<%= product.id %> "><img src="./images/products/<%= product.image %>" alt=""></a>
+              <h5><%= product.departure %> ---> <%= product.reach%></h5>
             </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active" data-bs-interval="10000">
-                <img src="/images/backgroundBeach.jpg" class="d-block w-100" alt="slide 1">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5></h5>
-                  <p></p>
-                </div>
-              </div>
-              <div class="carousel-item" data-bs-interval="2000">
-                <img src="/images/backgroundSnow.jpg" class="d-block w-100" alt="slide 2">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5></h5>
-                  <p></p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img src="/images/backgroundMountain.webp" class="d-block w-100" alt="slide 3">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5></h5>
-                  <p></p>
-                </div>
-              </div>
+            <div class="item-arrow">
+              <a href="#item-carrusel-<%=carruselArrowLeft(product.id)%>"><i class="fa-solid fa-chevron-left"></i></a>
+              <a href="#item-carrusel-<%=carruselArrowRight(product.id)%>"><i class="fa-solid fa-chevron-right"></i></a>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-
           </div>
+
+        <% } %> 
+      </div>
+
         <section class="section-nav">
             <div class="div-top">
                 <div class="busca-paquete">
@@ -138,7 +91,9 @@
         <div class="title-div">
             <h2 class="articles-title">Paquetes mas comprados</h2>
         </div>
+
         <section class="section-article">
+        <!-- En esta parte ahora estan las ofertas pero algun dia van a ir los ultimos paquetes visitados -->
             <%- include('./partials/productArticle') %>  
         </section>
 
