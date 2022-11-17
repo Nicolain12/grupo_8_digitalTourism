@@ -17,7 +17,10 @@
                     <div class="precio-info">
                         <p>$<%= product.price %></p>
                     </div>
-                    <a id="plane-unclicked" href=""><i class="fa-solid fa-plane-up"></i></a>
+                    
+                    <a class="a-button"><form action="/products/saveCart/<%= product.id %>" method="POST">
+                        <button type="submit" id="plane-unclicked"><i class="fa-solid fa-plane-up"></i></button>
+                    </form></a>
                 </div>
             </div>
         </div> 

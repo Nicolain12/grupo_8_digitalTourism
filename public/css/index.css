@@ -901,12 +901,14 @@ footer{
 }
 
 .package-article a{
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
 }
 .article-img{
     width: 90%;
-    margin: 1%;
     border-radius: 20px;
+    height: 90%;
 
 }
 .info-div{
@@ -938,14 +940,30 @@ footer{
 .info-bottom{
     margin-bottom: 2%;
 }
+
+
+
 .add-cart-div{
     width: 100%;
     justify-self: end;
     display: flex;
     justify-content: space-between;
+    padding: 5%;
 }
-.add-cart-div a{
-    margin: 2% 4%;
+.add-cart-div form{
+    width: 100%;
+    height: 100%;
+}
+
+.add-cart-div form button{
+    width: 100%;
+    height: 100%;
+    border: none;
+    color: #0d6efd;
+}
+
+.a-button{
+    text-decoration: none;
 }
 .precio-info{
     display: flex;
@@ -956,19 +974,16 @@ footer{
     font-size: 20px;
     margin: 0;
 }
-#plane-unclicked{
+ #plane-unclicked i{
     margin-right: 5%;
     font-size: 25px;
+
 }
-#plane-unclicked:hover{
+#plane-unclicked i:hover{
     font-size: 30px;
 }
 
-#plane-clicked{
-    display: none;
-    margin-right: 5%;
 
-}
 
 
 
@@ -1000,8 +1015,17 @@ footer{
     .info-top{
         justify-content: center;
     }
+    .a-button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .add-cart-div form button{
+    display: flex;
+    justify-content: end;
+    }
     #plane-unclicked{
-        text-align: right;
+        text-align: center;
     }
     .precio-info p, #plane-unclicked i{
         font-size: 28px;

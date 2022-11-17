@@ -29,6 +29,7 @@ router.get('/detail/:id', productsController.product)
 
 //Product cart
 router.get('/productCart', productsController.productCart)
+router.post('/saveCart/:id', productsController.saveCart)
 
 //Edit product
 router.get('/:id/edit', productsController.editProduct)

@@ -4,6 +4,9 @@ const path = require('path');
 const productsFilePath = path.join(__dirname, '../dataBase/product.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
+const cartFilePath = path.join(__dirname, '../dataBase/cart.json');
+const cartProducts = JSON.parse(fs.readFileSync(cartFilePath, 'utf-8'));
+
 const productsController = {
 
     customProduct: (req, res) =>{
@@ -17,7 +20,15 @@ const productsController = {
     },
 
     productCart: (req, res) =>{
-        res.render('./products/productCart')
+        res.render('./products/productCart', {products: cartProducts})
+    },
+    saveCart: (req, res) =>{
+        let productToSaveId = req.params.id
+        let toSave = products.find(element => element.id = productToSaveId)
+
+        cartProducts.push(toSave)
+        fs.writeFileSync(cartFilePath, JSON.stringify(cartProducts))
+        res.redirect('/products')
     },
 
 // Upload new information in one product
