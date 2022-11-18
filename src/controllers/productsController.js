@@ -66,6 +66,15 @@ const productsController = {
                 return productToEdit.price
             }
         }
+        let onsale = req.body.onSale || roductToEdit.onSale
+        function onSaleCounter(onsale) {      
+            if (onsale == "true"){
+                return true
+            }
+            else{
+                return false
+            }
+        } 
         let editedInformation =  {
             id: parseInt(parametro),
             departure: req.body.departure,
@@ -79,7 +88,7 @@ const productsController = {
             cabin: req.body.cabin == "none" ? productToEdit.cabin : req.body.cabin,
             service: req.body.service == "none" ? productToEdit.service : req.body.service,
             passengers: req.body.passengers == "none" ? productToEdit.passengers : req.body.passengers,
-            onSale: req.body.onSale || productToEdit.onSale,
+            onSale: onSaleCounter(onsale),
             price: priceCounter(filePrice),
             image: multerParam || productToEdit.image
 		}
