@@ -31,6 +31,10 @@ router.get('/detail/:id', productsController.product)
 router.get('/productCart', productsController.productCart)
 router.post('/saveCart/:id', productsController.saveCart)
 
+//Delete one cart product
+router.delete('/cart/:id', productsController.deleteCartProduct)
+
+
 //Edit product
 router.get('/:id/edit', productsController.editProduct)
 router.put('/:id', upload.single('productFile'), productsController.upload)
@@ -41,6 +45,7 @@ router.post('/products', upload.single('productFile'), productsController.store)
 
 //Delete one product
 router.delete('/:id', productsController.deleteProduct)
+
 
 
 module.exports = router

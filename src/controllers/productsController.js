@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { validationResult } = require('express-validator') 
 
 const productsFilePath = path.join(__dirname, '../dataBase/product.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -19,16 +20,32 @@ const productsController = {
         res.render('./products/product', {product: product})
     },
 
+
+// Cart of product
     productCart: (req, res) =>{
-        res.render('./products/productCart', {products: cartProducts})
+        if(cartProducts.length == 0){
+            return res.render('./products/emptyCart')
+        }else{        
+            return res.render('./products/productCart', {products: cartProducts})
+        }
+  
     },
     saveCart: (req, res) =>{
         let productToSaveId = req.params.id
-        let toSave = products.find(element => element.id = productToSaveId)
-
+        let toSave = products[productToSaveId - 1]
         cartProducts.push(toSave)
         fs.writeFileSync(cartFilePath, JSON.stringify(cartProducts))
-        res.redirect('/products')
+        res.redirect('/products') 
+    },
+// Deleating cart product
+    deleteCartProduct: (req,res) =>{
+        let productToRemove = req.params.id
+        let dataCartFilter = cartProducts.filter(element => (element.id != productToRemove)) 
+        dataCartFilter.map((element, index) => {
+            element.id = index + 1 
+        })
+		fs.writeFileSync(cartFilePath, JSON.stringify(dataCartFilter))
+		res.redirect('/products/productCart')
     },
 
 // Upload new information in one product

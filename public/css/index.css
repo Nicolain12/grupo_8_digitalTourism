@@ -909,6 +909,7 @@ footer{
     width: 90%;
     border-radius: 20px;
     height: 90%;
+    margin: 5% 0;
 
 }
 .info-div{
@@ -948,7 +949,7 @@ footer{
     justify-self: end;
     display: flex;
     justify-content: space-between;
-    padding: 5%;
+    padding: 2%;
 }
 .add-cart-div form{
     width: 100%;
@@ -962,13 +963,18 @@ footer{
     color: #0d6efd;
 }
 
+.add-cart-div a{
+    display: flex;
+    justify-content: end;
+    margin-left: 5%;
+}
 .a-button{
     text-decoration: none;
 }
 .precio-info{
     display: flex;
     align-items: center;
-    margin-right: 5%;
+    margin-left: 5%;
 }
 .precio-info p{
     font-size: 20px;
@@ -977,6 +983,7 @@ footer{
  #plane-unclicked i{
     margin-right: 5%;
     font-size: 25px;
+    background-color: white;
 
 }
 #plane-unclicked i:hover{
@@ -1019,10 +1026,16 @@ footer{
         display: flex;
         justify-content: center;
         align-items: center;
+        background-color: white;
+    }
+    .add-cart-div a{
+        justify-content: start;
+        margin-left: 0%;
     }
     .add-cart-div form button{
     display: flex;
     justify-content: end;
+    background-color: white;
     }
     #plane-unclicked{
         text-align: center;
@@ -1030,10 +1043,16 @@ footer{
     .precio-info p, #plane-unclicked i{
         font-size: 28px;
     }
+    #plane-unclicked i:hover{
+        font-size: 36px;
+    }
 }
 @media (min-width: 1024px){
     .precio-info p, #plane-unclicked i{
         font-size: 36px;
+    }
+    #plane-unclicked i:hover{
+        font-size: 42px;
     }
 }
 
@@ -1220,4 +1239,21 @@ footer{
         width: 70%;
         margin-left: auto;
     }
+}
+
+
+/* EMPTYCART.EJS */
+
+.emptyCartMain{
+    background-color: #1f53c5;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+.emptyCartMain h1{
+    font-weight: 600;
+    color: white;
+
+}
+.emptyCartMain img{
+    width: 100%;
 }
