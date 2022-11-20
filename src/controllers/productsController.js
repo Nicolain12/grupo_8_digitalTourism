@@ -66,7 +66,7 @@ const productsController = {
                 return productToEdit.price
             }
         }
-        let onsale = req.body.onSale || roductToEdit.onSale
+        let onsale = req.body.onSale || productToEdit.onSale
         function onSaleCounter(onsale) {      
             if (onsale == "true"){
                 return true
