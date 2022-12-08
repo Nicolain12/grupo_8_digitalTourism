@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('../partials/head') %>
+
+<body>
+
+    <%- include('../partials/header') %> 
+
+    <main>
+
+        <form class="form-login" action="/users/loggin" method="POST">
+
+            <h4>Iniciar sesión </h4>
+            <input class="controls" value="<%= locals.old && old.email %> "  type="email" name="email"  id="email" placeholder="Ingrese su Correo">
+            <% if (locals.errors && errors.email) { %>
+                <p class="error-msg"><%= errors.email.msg %> </p>
+            <% } %>
+            <input class="controls" type="password" name="password" id="password" placeholder="Ingrese su Contraseña">
+            <% if (locals.errors && errors.password) { %>
+                <p class="error-msg"><%= errors.password.msg %> </p>
+            <% } %>
+            <label for="remember"> <input type="checkbox" name="remember" > Recordarme </label>
+            <input class="botons" type="submit">
+            <p> ¿Se te olvidó tu contraseña?<a href="#"> Click Aqui</a></p>
+
+        </form>
+
+    </main>
+
+    <%- include('../partials/footer') %> 
+    
+</body>
+
+</html>

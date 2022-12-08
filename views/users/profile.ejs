@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('../partials/head') %>
+
+<body>
+
+    <%- include('../partials/header') %> 
+
+    <main>
+        <div class="main-profile-div">
+            <section class="img-profile">
+                <img src="/images/users/user-1670453207043.jpg" alt="">
+            </section>
+            <section class="main-info-profile">
+                <div class="name-profile">
+                    <h5>Nombre:</h5>
+                    <p><%=locals.userLogged.name%></p>
+                </div>
+                <div class="surname-profile">
+                    <h5>Apellido:</h5>
+                    <p><%=locals.userLogged.surname%></p>
+                </div>
+                <div class="email-profile">
+                    <h5>Email:</h5>
+                    <p><%=locals.userLogged.email%></p>
+                </div>
+            </section>
+        </div>
+        <div class="button-profile">
+            <a class="edit-button-profile" href="/users/editUser">Editar Usuario</a>
+            <form class="loggout-button-profile" action="/users/loggOut">Cerrar sesion</form>
+            <a class="delete-button-profile" href="/users/deleteConfirmation">Eliminar Usuario</a>
+        </div>
+    </main>
+
+    <%- include('../partials/footer') %> 
+    
+</body>
+
+</html>

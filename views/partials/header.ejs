@@ -16,7 +16,11 @@
             <a href="/products/productCart"><i class="fa-solid fa-plane-up"></i></a>
         </div>
         <div class="div-i-2">
-            <a href="/users/login"><i class="fa-solid fa-user"></i></a>
+            <% if (locals.isLogged) { %>
+                <a href="/users/profile"><i class="fa-solid fa-user"></i></a>
+            <% } else {%>
+                <a href="/users/choose"><i class="fa-solid fa-user"></i></a>
+            <% } %> 
         </div>
     </div>
     <div class="burger-menu">

@@ -6,15 +6,50 @@
     <%- include('../partials/header') %> 
 
     <main>
-        <form class="form-register" action="/register" method="GET">
+        <form class="form-register" action="/users/registerUser" enctype="multipart/form-data" method="POST">
+            
             <h4>Formulario Registro</h4>
-            <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre">
-            <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido">
-            <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
-            <input class="controls" type="password" name="correo" id="correo" placeholder="Ingrese su Contraseña">
+            <div class="main-register-from-top-1">
+                <label for="userImg">Ingrese una foto:</label>
+                <input type="file" id="userImg" name="userImg">
+                <label class="register-form-i" for="userImg" ><i class="fa-solid fa-image"></i></label>
+                <% if (locals.errors && errors.userImg) { %>
+                    <p class="error-msg"><%= errors.userImg.msg %> </p>
+                <% } %>
+            </div>
+            
+            <label class="first-label" for="name">Ingrese su Nombre:</label>
+            <input class="controls" type="text" name="name" value="<%= locals.old && old.name %> " id="name">
+            <% if (locals.errors && errors.name) { %>
+                <p class="error-msg"><%= errors.name.msg %> </p>
+            <% } %>
+            
+            <label for="surname">Ingrese su Apellido:</label>
+            <input class="controls" type="text" name="surname" value="<%= locals.old && old.surname %> " id="surname">
+            <% if (locals.errors && errors.surname) { %>
+                <p class="error-msg"><%= errors.surname.msg %> </p>
+            <% } %>
+            
+            <label for="email">Ingrese su Email:</label>
+            <input class="controls" type="email" name="email" value="<%= locals.old && old.email %> " id="email">
+            <% if (locals.errors && errors.email) { %>
+                <p class="error-msg"><%= errors.email.msg %> </p>
+            <% } %>
+            
+            <label for="password">Ingrese su Contraseña:</label>
+            <input class="controls" type="password" name="password" id="password">
+            <% if (locals.errors && errors.password) { %>
+                <p class="error-msg"><%= errors.password.msg %> </p>
+            <% } %>
+            
+            <label for="passwordConfirm">Confirme su Contraseña:</label>
+            <input class="controls" type="password" name="passwordConfirm" id="passwordConfirm">
+            <% if (locals.errors && errors.passwordConfirm) { %>
+                <p class="error-msg"><%= errors.passwordConfirm.msg %> </p>
+            <% } %>
             <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
             <input class="botons" type="submit" value="Registrar">
-            <p><a href="/login.html">¿Ya tengo Cuenta?</a></p>
+            <p><a href="/users/login">¿Ya tengo Cuenta?</a></p>
         
         </form>
     </main>
