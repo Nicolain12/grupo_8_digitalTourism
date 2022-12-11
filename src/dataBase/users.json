@@ -4,7 +4,8 @@
         "name": "Nicolas",
         "surname": " Lain",
         "email": "lainnicolas1@gmail.com",
-        "password": "$2a$10$NsnT9PMW9xhaZ7KMnYuaaOMMZ7rv95ujdMsBDqnPLlvvRnihs54Ca"
+        "password": "$2a$10$NsnT9PMW9xhaZ7KMnYuaaOMMZ7rv95ujdMsBDqnPLlvvRnihs54Ca",
+        "image": "user-1670453174285.jpg"
     },
     {
         "id": 2,
@@ -16,10 +17,10 @@
     },
     {
         "id": 3,
-        "name": " vicky",
+        "name": " vicky",   
         "surname": " valbu",
         "email": "vickyvalbu@gmail.com",
         "password": "$2a$10$TUxEw2xZ8NKkef6XatrK3.SmfbGlJbJ/aCFfCX47zjRn1mNM9kNTO",
-        "image": "user-1670509278504.jpg"
+        "image": "user-1670453174285.jpg"
     }
 ]

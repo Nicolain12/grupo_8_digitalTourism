@@ -2,6 +2,8 @@ const express = require('express')
 const router = express.Router()
 const usersController = require('../controllers/usersController')
 const path = require('path');
+const authLogg = require('../middlewares/authLogg')
+
 
 //VALIDATIONS
 const {body} = require('express-validator')
@@ -46,23 +48,27 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage })
 
 //list products
-router.get('/', usersController.users)
+router.get('/', authLogg, usersController.users)
 
 //choose
-router.get('/choose', usersController.choose)
+router.get('/choose', authLogg, usersController.choose)
 
 //profile
 router.get('/profile', usersController.profile)
 
+//edit user
+router.get('/editUser', usersController.editUser)
+router.put('/userUpdate/:id', usersController.userUpdate)
+
 //login
-router.get('/loggin', usersController.login)
-router.post('/loggin', validationsLoggin, usersController.loggSubmit)
+router.get('/loggin', authLogg, usersController.login)
+router.post('/loggin', authLogg, validationsLoggin, usersController.loggSubmit)
 
 //loggOut
 router.post('/loggOut', validationsLoggin, usersController.loggOut)
 
 //register
-router.get('/register', usersController.register)
-router.post('/registerUser', upload.single('userImg'), validationsRegister, usersController.registerUser)
+router.get('/register', authLogg, usersController.register)
+router.post('/registerUser', authLogg, upload.single('userImg'), validationsRegister, usersController.registerUser)
 
 module.exports = router

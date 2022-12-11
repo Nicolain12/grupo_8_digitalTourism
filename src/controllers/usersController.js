@@ -7,64 +7,75 @@ const usersFilePath = path.join(__dirname, '../database/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 //validations
-const {validationResult} = require('express-validator')
+const { validationResult } = require('express-validator')
 
 const usersController = {
     //List of users
-    users: (req, res) =>{
+    users: (req, res) => {
     },
 
     //Loggin
-    login: (req, res) =>{
+    login: (req, res) => {
         res.render('./users/loggin')
     },
 
     loggSubmit: (req, res) => {
-        let errors = validationResult(req)
-        if(errors.isEmpty()){
-            let findedUser = users.find(element => element.email == req.body.email)
-        if(findedUser){
-            let aproved = bcrypt.compareSync(req.body.password, findedUser.password)
-            if(aproved){
-                if(req.body.remember){
-                    res.cookie('email', req.body.email, {maxAge: (1000 * 60) * 60})
-                }
-                delete findedUser.password
-                req.session.userLogged = findedUser
-                return res.redirect('/')
-            }else{
-                return res.render('./users/loggin', {
-                    errors:{
-                        email:{
-                            msg: 'Las credenciales son invalidas'
+        try {
+            let errors = validationResult(req)
+            if (errors.isEmpty()) {
+                let findedUser = users.find(element => element.email == req.body.email)
+                if (findedUser) {
+                    let aproved = bcrypt.compareSync(req.body.password, findedUser.password)
+                    if (aproved) {
+                        if (req.body.remember) {
+                            res.cookie('email', req.body.email, { maxAge: (1000 * 60) * 60 })
                         }
+                        delete findedUser.password
+                        req.session.userLogged = findedUser
+                        return res.redirect('/')
+                    } else {
+                        return res.render('./users/loggin', {
+                            errors: {
+                                email: {
+                                    msg: 'Las credenciales son invalidas'
+                                }
+                            }
+                        })
                     }
-                })
-            }
-        }else{
-            return res.render('./users/loggin', {
-                errors:{
-                    email:{
-                        msg: 'Las credenciales son invalidas'
-                    }
+                } else {
+                    return res.render('./users/loggin', {
+                        errors: {
+                            email: {
+                                msg: 'Las credenciales son invalidas'
+                            }
+                        }
+                    })
                 }
-            })
-        }
-        }else{
-            return res.render('./users/loggin', {errors: errors.mapped(), old: req.body})
+            } else {
+                return res.render('./users/loggin', { errors: errors.mapped(), old: req.body })
+
+            }
 
         }
 
+        catch {
+            res.redirect('/users/loggin', {errors:{
+                email:{
+                    msg: 'Las credenciales son invalidas'
+                }
+            }})
+        }
     },
-    
+
     //REGISTER
-    register: (req, res) =>{
+    register: (req, res) => {
         res.render('./users/register')
     },
 
     registerUser: (req, res) => {
+    try{
         let errors = validationResult(req)
-        if(errors.isEmpty()){
+        if (errors.isEmpty()) {
             let newUser = {
                 id: users.length + 1,
                 name: req.body.name,
@@ -73,27 +84,27 @@ const usersController = {
                 password: bcrypt.hashSync(req.body.password, 10),
                 image: req.file ? req.file.filename : null
             }
-            
-            if(req.body.password != req.body.passwordConfirm){
+
+            if (req.body.password != req.body.passwordConfirm) {
                 return res.render('./users/register', {
-                    errors:{
-                        passwordConfirm:{
+                    errors: {
+                        passwordConfirm: {
                             msg: 'Las contraseñas deben ser iguales'
                         }
                     }
                 })
             }
-    
+
             let userInDb = users.find(element => element.email == req.body.email)
-            if (userInDb){
+            if (userInDb) {
                 return res.render('./users/register', {
-                    errors:{
-                        email:{
+                    errors: {
+                        email: {
                             msg: 'El Email ya se encuentra registrado'
                         }
                     }
                 })
-            }else{
+            } else {
                 users.push(newUser)
                 fs.writeFileSync(usersFilePath, JSON.stringify(users))
                 delete newUser.password
@@ -101,9 +112,13 @@ const usersController = {
                 return res.redirect('/')
             }
         }
-        else{
-            return res.render('./users/register', {errors: errors.mapped(), old: req.body})
+        else {
+            return res.render('./users/register', { errors: errors.mapped(), old: req.body })
         }
+    }
+    catch{
+        res.redirect('/users/register', {errors:{name:{msg:'Las credenciales son invaldias'}}})
+    }
 
     },
 
@@ -112,6 +127,13 @@ const usersController = {
         res.render('./users/profile')
     },
 
+    //edit user
+    editUser: (req,res) => {
+        res.render('./users/editUser')
+    },
+    userUpdate: (req,res) => {
+      console.log(req.session.userLogged);  
+    },
     //loggOut
     loggOut: (req, res) => {
         res.clearCookie('email')

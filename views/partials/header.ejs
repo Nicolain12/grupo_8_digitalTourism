@@ -12,14 +12,15 @@
         </ul>
     </div>
     <div class="div-links">
-        <div class="div-i-1">
-            <a href="/products/productCart"><i class="fa-solid fa-plane-up"></i></a>
-        </div>
+        <% if (locals.isLogged) { %>
+            <div class="div-i-1">
+                <a href="/products/productCart"><i class="fa-solid fa-plane-up"></i></a>
+            </div>
         <div class="div-i-2">
-            <% if (locals.isLogged) { %>
                 <a href="/users/profile"><i class="fa-solid fa-user"></i></a>
             <% } else {%>
-                <a href="/users/choose"><i class="fa-solid fa-user"></i></a>
+                <div class="div-i-2">
+                    <a href="/users/choose"><i class="fa-solid fa-user"></i></a>
             <% } %> 
         </div>
     </div>

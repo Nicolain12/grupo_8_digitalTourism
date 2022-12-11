@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const productsController = require('../controllers/productsController')
 const path = require('path');
+const isGuesth = require('../middlewares/isGuesth.js')
 
 //MULTER
 const multer = require('multer');
@@ -18,34 +19,34 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage })
 
 //List of products
-router.get('/', productsController.productList)
-router.get('/Onsale', productsController.onSale)
+router.get('/', isGuesth, productsController.productList)
+router.get('/Onsale', isGuesth, productsController.onSale)
 
 //Personalize your product
-router.get('/customProduct', productsController.customProduct)
+router.get('/customProduct', isGuesth, productsController.customProduct)
 
 //specific product
-router.get('/detail/:id', productsController.product)
+router.get('/detail/:id', isGuesth, productsController.product)
 
 
 //Product cart
-router.get('/productCart', productsController.productCart)
-router.post('/saveCart/:id', productsController.saveCart)
+router.get('/productCart', isGuesth, productsController.productCart)
+router.post('/saveCart/:id', isGuesth, productsController.saveCart)
 
 //Delete one cart product
-router.delete('/cart/:id', productsController.deleteCartProduct)
+router.delete('/cart/:id', isGuesth, productsController.deleteCartProduct)
 
 
 //Edit product
-router.get('/:id/edit', productsController.editProduct)
-router.put('/:id', upload.single('productFile'), productsController.upload)
+router.get('/:id/edit', isGuesth, productsController.editProduct)
+router.put('/:id', isGuesth, upload.single('productFile'), productsController.upload)
 
 // Add new product
-router.get('/submitProduct', productsController.submitProduct)
-router.post('/products', upload.single('productFile'), productsController.store); 
+router.get('/submitProduct', isGuesth, productsController.submitProduct)
+router.post('/products', isGuesth, upload.single('productFile'), productsController.store); 
 
 //Delete one product
-router.delete('/:id', productsController.deleteProduct)
+router.delete('/:id', isGuesth, productsController.deleteProduct)
 
 
 

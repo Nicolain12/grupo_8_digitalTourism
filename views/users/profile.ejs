@@ -10,7 +10,7 @@
     <main>
         <div class="main-profile-div">
             <section class="img-profile">
-                <img src="/images/users/user-1670453207043.jpg" alt="">
+                <img src="/images/users/<%=locals.userLogged.image%>" alt="Imagen del usuario">
             </section>
             <section class="main-info-profile">
                 <div class="name-profile">
@@ -29,7 +29,9 @@
         </div>
         <div class="button-profile">
             <a class="edit-button-profile" href="/users/editUser">Editar Usuario</a>
-            <form class="loggout-button-profile" action="/users/loggOut">Cerrar sesion</form>
+            <form class="loggout-button-profile" action="/users/loggOut" method="post">
+                <button type="submit">Cerrar sesion</button>
+            </form>
             <a class="delete-button-profile" href="/users/deleteConfirmation">Eliminar Usuario</a>
         </div>
     </main>

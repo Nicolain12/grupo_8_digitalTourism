@@ -1420,6 +1420,7 @@ footer{
     width: 70%;
     height: 100%;
     border-radius: 100px;
+
 }
 .main-info-profile{
     width: 80%;
@@ -1451,6 +1452,11 @@ footer{
     text-align: center;
     font-size: 22px;
 }
+.edit-button-profile:hover{
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 0 30px rgb(100,100,100);
+}
 .loggout-button-profile{
     margin-top: 5%;
     color: white;
@@ -1459,6 +1465,21 @@ footer{
     height: 2em;
     text-align: center;
     font-size: 22px;
+}
+
+.loggout-button-profile button{
+    color: white;
+    background-color: #0d6efd;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 22px;
+    border: none;
+}
+.loggout-button-profile button:hover{
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 0 30px rgb(100,100,100);
 }
 .delete-button-profile{
     margin-top: 5%;
@@ -1471,6 +1492,11 @@ footer{
     text-align: center;
     font-size: 22px;
 
+}
+.delete-button-profile:hover{
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 0 30px rgb(100,100,100);
 }
 @media (min-width: 768px){
     .main-profile-div{
@@ -1497,3 +1523,108 @@ footer{
     }
 
 }
+
+
+/* EDITUSER.EJS */
+
+.main-profile-div-EDIT{
+    width: 100%;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: start;
+    align-items: center;
+}
+
+.img-profile-EDIT{
+    width: 80%;
+    text-align: center;
+}
+
+.img-profile-EDIT label{
+    cursor: pointer;
+}
+.img-profile-EDIT label p{
+    display: none;
+    color: black;
+    font-weight: 600;
+}
+.img-profile-EDIT label:hover{
+    width: 90%;
+}
+.img-profile-EDIT label:hover p{
+    display: block;
+}
+.img-profile-EDIT img{
+    width: 70%;
+    height: 100%;
+    border-radius: 100px;
+}
+
+.img-profile-EDIT input{
+    display: none
+}
+    
+.main-info-profile-EDIT{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+}
+.main-info-profile-EDIT div{
+    border-bottom: #24262b 1px solid;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.name-edit input, .surname-edit input, .email-edit input{
+    margin-top: 5%;
+    margin-bottom: 2%;
+    height: 2rem;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+.name-edit label, .surname-edit label, .email-edit label{
+    margin-top: 2%;
+}
+
+.button-profile-edit{
+    margin: 5% 2% 5% 0;
+    color: white;
+    background-color: #0d6efd;
+    width: 30%;
+    height: 2em;
+    text-align: center;
+
+}
+
+.button-profile-edit button{
+    color: white;
+    background-color: #0d6efd;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 22px;
+    border: none;
+}
+.button-profile-edit button:hover{
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 0 30px rgb(100,100,100);
+}
+
+
+/* @media (min-width: 768px){
+    .name-edit input, .surname-edit input, .email-edit input{
+        width: 50%;
+    }
+}
+@media (min-width: 1024px){
+    .name-edit input, .surname-edit input, .email-edit input{
+        width: 40%;
+    }
+} */

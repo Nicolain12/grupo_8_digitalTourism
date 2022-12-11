@@ -8,7 +8,12 @@
     <main>
         <form class="form-register" action="/users/registerUser" enctype="multipart/form-data" method="POST">
             
-            <h4>Formulario Registro</h4>
+            
+            <% if (locals.errors && errors.firstLogg) { %>
+             <p class="error-msg"><%= errors.firstLogg.msg %></p>
+            <% } else {%>
+                <h4>Formulario Registro</h4>
+                <% } %> 
             <div class="main-register-from-top-1">
                 <label for="userImg">Ingrese una foto:</label>
                 <input type="file" id="userImg" name="userImg">
@@ -49,7 +54,7 @@
             <% } %>
             <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
             <input class="botons" type="submit" value="Registrar">
-            <p><a href="/users/login">¿Ya tengo Cuenta?</a></p>
+            <p><a href="/users/loggin">¿Ya tengo Cuenta?</a></p>
         
         </form>
     </main>
