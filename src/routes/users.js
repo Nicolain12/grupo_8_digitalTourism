@@ -48,27 +48,32 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage })
 
 //list products
-router.get('/', authLogg, usersController.users)
+router.get('/', usersController.users)
 
 //choose
 router.get('/choose', authLogg, usersController.choose)
 
 //profile
-router.get('/profile', usersController.profile)
+router.get('/profile/:id', usersController.profile)
 
 //edit user
-router.get('/editUser', usersController.editUser)
-router.put('/userUpdate/:id', usersController.userUpdate)
+router.get('/editUser/:id', usersController.editUser)
+router.put('/userUpdate/:id', upload.single('fileEdit'), usersController.userUpdate)
 
 //login
 router.get('/loggin', authLogg, usersController.login)
-router.post('/loggin', authLogg, validationsLoggin, usersController.loggSubmit)
+router.post('/loggin', validationsLoggin, authLogg, usersController.loggSubmit)
 
 //loggOut
-router.post('/loggOut', validationsLoggin, usersController.loggOut)
+router.post('/loggOut', usersController.loggOut)
 
 //register
 router.get('/register', authLogg, usersController.register)
 router.post('/registerUser', authLogg, upload.single('userImg'), validationsRegister, usersController.registerUser)
+
+// delete user
+router.get('/deleteConfirm/:id', usersController.deleteConfirm)
+router.delete('/distroy/:id', usersController.distroy)
+
 
 module.exports = router

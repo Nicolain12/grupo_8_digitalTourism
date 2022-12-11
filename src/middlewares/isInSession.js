@@ -8,9 +8,7 @@ function isInSession (req, res, next) {
     let userEmail = req.cookies.email
     if(userEmail){
         var userFound = users.find(element => element.email == userEmail)
-        delete userFound.password
         req.session.userLogged = userFound
-
     }
     
     if (req.session && req.session.userLogged){

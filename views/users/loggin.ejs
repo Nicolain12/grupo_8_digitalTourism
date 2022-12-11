@@ -12,7 +12,7 @@
         <form class="form-login" action="/users/loggin" method="POST">
 
             <h4>Iniciar sesión </h4>
-            <input class="controls" value="<%= locals.old && old.email %> "  type="email" name="email"  id="email" placeholder="Ingrese su Correo">
+            <input class="controls" value="<%= locals.old && old.email %>"  type="email" name="email"  id="email" placeholder="Ingrese su Correo">
             <% if (locals.errors && errors.email) { %>
                 <p class="error-msg"><%= errors.email.msg %> </p>
             <% } %>

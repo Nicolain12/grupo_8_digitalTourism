@@ -1,26 +1,18 @@
 [
     {
         "id": 1,
-        "name": "Nicolas",
-        "surname": " Lain",
-        "email": "lainnicolas1@gmail.com",
-        "password": "$2a$10$NsnT9PMW9xhaZ7KMnYuaaOMMZ7rv95ujdMsBDqnPLlvvRnihs54Ca",
-        "image": "user-1670453174285.jpg"
+        "name": " Nicolas",
+        "surname": "Lainn",
+        "email": "lainnicolas@mail.com",
+        "password": "$2a$10$dhvUrQdJ89qvdbf.FhFabePflBH4bD/YSTTCziNg.16iU8DCFnShm",
+        "image": "default.jpg"
     },
     {
         "id": 2,
-        "name": " Crycod",
-        "surname": "XV",
-        "email": "cry@mail.com",
-        "password": "$2a$10$eWzxFEk5S/OEYpkYhobpHO.tyzoS4dOJ6atrULcdbt2QG8YYMfbri",
-        "image": "user-1670453174285.jpg"
-    },
-    {
-        "id": 3,
-        "name": " vicky",   
-        "surname": " valbu",
-        "email": "vickyvalbu@gmail.com",
-        "password": "$2a$10$TUxEw2xZ8NKkef6XatrK3.SmfbGlJbJ/aCFfCX47zjRn1mNM9kNTO",
-        "image": "user-1670453174285.jpg"
+        "name": " Victoria",
+        "surname": "valbu",
+        "email": "valbu@mail.com",
+        "password": "$2a$10$dhvUrQdJ89qvdbf.FhFabePflBH4bD/YSTTCziNg.16iU8DCFnShm",
+        "image": "default.jpg"
     }
 ]

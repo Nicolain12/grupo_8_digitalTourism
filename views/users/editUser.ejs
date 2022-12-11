@@ -8,26 +8,26 @@
     <%- include('../partials/header') %> 
 
     <main>
-        <form action="/users/userUpdate/<%=locals.userLogged.id%>?_method=PUT" method="POST"  class="main-profile-div-EDIT">
+        <form action="/users/userUpdate/<%=user.id%>?_method=PUT" enctype="multipart/form-data" method="POST"  class="main-profile-div-EDIT">
             <section class="img-profile-EDIT">
                 <label for="fileEdit">
-                    <img src="/images/users/<%=locals.userLogged.image%>" alt="Imagen del usuario">
+                    <img src="/images/users/<%=user.image%>" alt="Imagen del usuario">
                     <p>Editar foto</p>
                 </label>
-                <input type="file" value="<%=locals.userLogged.image%>" name="fileEdit" id="fileEdit"> 
+                <input type="file" value="<%=user.image%>" name="fileEdit" id="fileEdit"> 
             </section>
             <section class="main-info-profile-EDIT">
                 <div class="name-edit">
                     <label for="">Nombre:</label>
-                    <input type="text" value="<%=locals.userLogged.name%>" name="nameEdit" id="nameEdit">
+                    <input type="text" value="<%=user.name%>" name="nameEdit" id="nameEdit">
                 </div>
                 <div class="surname-edit">
                     <label for="surnameEdit">Apellido:</label>
-                    <input type="text" value="<%=locals.userLogged.surname%>" name="surnameEdit" id="surnameEdit">
+                    <input type="text" value="<%=user.surname%>" name="surnameEdit" id="surnameEdit">
                 </div>
                 <div class="email-edit">
                     <label for="emailEdit">Email:</label>
-                    <input type="email" value="<%=locals.userLogged.email%>" name="emailEdit" id="emailEdit">
+                    <input type="email" value="<%=user.email%>" name="emailEdit" id="emailEdit">
                 </div>
             </section>
         

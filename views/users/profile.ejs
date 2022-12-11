@@ -10,29 +10,29 @@
     <main>
         <div class="main-profile-div">
             <section class="img-profile">
-                <img src="/images/users/<%=locals.userLogged.image%>" alt="Imagen del usuario">
+                <img src="/images/users/<%=user.image%>" alt="Imagen del usuario">
             </section>
             <section class="main-info-profile">
                 <div class="name-profile">
                     <h5>Nombre:</h5>
-                    <p><%=locals.userLogged.name%></p>
+                    <p><%=user.name%></p>
                 </div>
                 <div class="surname-profile">
                     <h5>Apellido:</h5>
-                    <p><%=locals.userLogged.surname%></p>
+                    <p><%=user.surname%></p>
                 </div>
                 <div class="email-profile">
                     <h5>Email:</h5>
-                    <p><%=locals.userLogged.email%></p>
+                    <p><%=user.email%></p>
                 </div>
             </section>
         </div>
         <div class="button-profile">
-            <a class="edit-button-profile" href="/users/editUser">Editar Usuario</a>
+            <a class="edit-button-profile" href="/users/editUser/<%=user.id%>">Editar Usuario</a>
             <form class="loggout-button-profile" action="/users/loggOut" method="post">
                 <button type="submit">Cerrar sesion</button>
             </form>
-            <a class="delete-button-profile" href="/users/deleteConfirmation">Eliminar Usuario</a>
+            <a class="delete-button-profile" href="/users/deleteConfirm/<%=user.id%>">Eliminar Usuario</a>
         </div>
     </main>
 

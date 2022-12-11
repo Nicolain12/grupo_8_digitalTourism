@@ -1365,6 +1365,7 @@ footer{
 
 .choose-title{
     width: 100%;
+    margin-top: 2%;
     text-align: center;
 }
 .choose-title h3{
@@ -1382,14 +1383,14 @@ footer{
     color: white;
     text-decoration: none;
     width: 40%;
-    height: 15%;
     text-align: center;
     font-size: 22px;
+    padding: 1% 0;
 }
 .choose-options a:hover{
-    width: 42%;
-    height: 17%;
-    font-size: 24px;
+font-weight: 600;
+box-shadow: 0 0 50px rgb(100,100,100);
+border: 1px solid white;
 }
 
 @media (min-width: 768px){
@@ -1618,13 +1619,40 @@ footer{
 }
 
 
-/* @media (min-width: 768px){
-    .name-edit input, .surname-edit input, .email-edit input{
-        width: 50%;
-    }
+/* DELETECONFIRM */
+
+.delete-confirm{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
-@media (min-width: 1024px){
-    .name-edit input, .surname-edit input, .email-edit input{
-        width: 40%;
-    }
-} */
+.delete-confirm h3{
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+.delete-confirm a{
+    text-decoration: none;
+}
+.delete-confirm a:hover{
+    font-weight: 600;
+}
+.delete-confirm button{
+    color: white;
+    background-color: red;
+    width: 40%;
+    padding: 1% 0;
+    text-align: center;
+    font-size: 22px;
+    border: none;
+}
+.delete-confirm button:hover{
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 0 30px rgb(100,100,100);
+    border: 1px solid white;
+}
