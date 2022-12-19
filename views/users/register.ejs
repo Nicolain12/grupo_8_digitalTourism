@@ -17,7 +17,6 @@
             <div class="main-register-from-top-1">
                 <label for="userImg">Ingrese una foto:</label>
                 <input type="file" id="userImg" name="userImg">
-                <label class="register-form-i" for="userImg" ><i class="fa-solid fa-image"></i></label>
                 <% if (locals.errors && errors.userImg) { %>
                     <p class="error-msg"><%= errors.userImg.msg %> </p>
                 <% } %>
@@ -53,7 +52,7 @@
                 <p class="error-msg"><%= errors.passwordConfirm.msg %> </p>
             <% } %>
             <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
-            <input class="botons" type="submit" value="Registrar">
+            <button class="botons" type="submit" value="Registrar">Registrar</button>
             <p><a href="/users/loggin">¿Ya tengo Cuenta?</a></p>
         
         </form>
