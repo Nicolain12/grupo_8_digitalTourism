@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { validationResult } = require('express-validator') 
+const { validationResult } = require('express-validator');
 
 
 const productsFilePath = path.join(__dirname, '../dataBase/product.json');
@@ -23,21 +23,9 @@ const productsController = {
 
 
 // Cart of product
-    productCart: (req, res) =>{
-        if(cartProducts.length == 0){
-            return res.render('./products/emptyCart')
-        }else{        
-            return res.render('./products/productCart', {products: cartProducts})
-        }
-  
-    },
-    saveCart: (req, res) =>{
-        let productToSaveId = req.params.id
-        let toSave = products[productToSaveId - 1]
-        cartProducts.push(toSave)
-        fs.writeFileSync(cartFilePath, JSON.stringify(cartProducts))
-        res.redirect('/products') 
-    },
+
+
+
 // Deleating cart product
     deleteCartProduct: (req,res) =>{
         let productToRemove = req.params.id

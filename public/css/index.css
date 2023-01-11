@@ -17,10 +17,21 @@ font-family: 'Roboto', sans-serif; (bold: 200, 400 y 600)
     box-sizing: border-box;
 }
 
-
+/****** ERROR ******/
 .error-msg{
     margin-top: 0;
+    margin-bottom: 0;
     color: red;
+    font-size: 18px;
+
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+@media (min-width: 768px){
+
 }
 
 
@@ -673,13 +684,14 @@ footer{
     padding: 10px;
     border-radius: 4px;
     margin-top: 16px;
+    margin-bottom: 0;
     border: 1px solid #1f53c5;
     font-family: 'calibri';
     font-size: 18px;
     color: white;
   }
 
-  .form-register p {
+  .from-register-p {
     height: 40px;
     text-align: center;
     font-size: 18px;
@@ -1122,6 +1134,7 @@ footer{
     margin-right: 5%;
     font-size: 25px;
     background-color: white;
+    cursor: pointer;
 
 }
 #plane-unclicked i:hover{

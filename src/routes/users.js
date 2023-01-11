@@ -22,9 +22,21 @@ const validationsRegister = [
         .isLength({min: 5, max: 100}).withMessage('Tienes que introducir un Email valido'),
 
     body('password')
-        .notEmpty().withMessage('Debes introducir una contraseña')
-]
+        .notEmpty().withMessage('Debes introducir una contraseña'),
+    body('userImg').custom((value, {req}) =>{
+        let file = req.file
+        let allowedExtensions = ['.jpg', '.png', '.gif']
 
+        if(!file){
+            throw new Error('Tienes que subir una imagen')
+        }else{
+            let fileExtension = path.extname(file.originalname)
+            if(!allowedExtensions.includes(fileExtension)){
+                throw new Error(`Las imagenes permitidas son de los tipos ${allowedExtensions.join(', ')}`)
+            }
+        }
+    })
+]
 const validationsLoggin = [
     body('email')
         .notEmpty().withMessage('Tienes que introducir un Email').bail()
@@ -46,6 +58,8 @@ const storage = multer.diskStorage({
     }
 })
 const upload = multer({ storage: storage })
+
+
 
 //list products
 router.get('/', usersController.users)

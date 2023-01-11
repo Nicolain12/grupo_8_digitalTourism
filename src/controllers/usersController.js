@@ -2,9 +2,6 @@ const path = require('path')
 const fs = require('fs')
 const bcrypt = require('bcryptjs');
 
-//Users in DB
-const usersFilePath = path.join(__dirname, '../database/users.json');
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 //validations
 const { validationResult } = require('express-validator');
@@ -69,16 +66,16 @@ const usersController = {
         res.render('./users/register')
     },
 
-    registerUser: (req, res) => {
+    registerUser: async (req, res) => {
         try {
-            let errors = validationResult(req)
+            let errors = validationResult(req)      
             if (errors.isEmpty()) {
                 let newUser = {
-                    id: users.length + 1,
                     name: req.body.name,
                     surname: req.body.surname,
                     email: req.body.email,
                     password: bcrypt.hashSync(req.body.password, 10),
+                    amdmin: false,
                     image: req.file ? req.file.filename : 'default.jpg'
                 }
                 if (req.body.password != req.body.passwordConfirm) {
@@ -90,6 +87,7 @@ const usersController = {
                         }
                     })
                 }
+
                 let userInDb = users.find(element => element.email == req.body.email)
                 if (userInDb) {
                     return res.render('./users/register', {
@@ -105,9 +103,12 @@ const usersController = {
                     return res.redirect('/users/loggin')
                 }
 
+
             }
             else {
+
                 return res.render('./users/register', { errors: errors.mapped(), old: req.body })
+
             }
         }
         catch {
