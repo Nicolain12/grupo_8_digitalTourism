@@ -19,9 +19,13 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
 
-        created_at: dataTypes.TIMESTAMP,
+        created_at: {
+            type: dataTypes.DATE
+        },
 
-        updated_at: dataTypes.TIMESTAMP
+        updated_at: {
+            type: dataTypes.DATE
+        }
     };
     let config = {
         timestamps: true,
@@ -34,8 +38,8 @@ module.exports = (sequelize, dataTypes) => {
 
     const Ticket = sequelize.define(alias, cols, config);
 
+    
     Ticket.associate = function (models) {
-
         // Conection with users db
         Ticket.belongsTo(models.User, {
             as: "users",
@@ -70,3 +74,4 @@ module.exports = (sequelize, dataTypes) => {
 
     return Ticket
 };
+

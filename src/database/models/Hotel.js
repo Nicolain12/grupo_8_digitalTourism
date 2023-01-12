@@ -12,7 +12,7 @@ module.exports = (sequelize, dataTypes) => {
         name: {
             type: dataTypes.STRING,
             allowNull: false
-        }, 
+        },
         spot: {
             type: dataTypes.STRING(100),
             allowNull: false
@@ -30,9 +30,13 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
 
-        created_at: dataTypes.TIMESTAMP,
+        created_at: {
+            type: dataTypes.DATE
+        },
 
-        updated_at: dataTypes.TIMESTAMP
+        updated_at: {
+            type: dataTypes.DATE
+        }
     };
     let config = {
         timestamps: true,
@@ -46,19 +50,19 @@ module.exports = (sequelize, dataTypes) => {
     const Hotel = sequelize.define(alias, cols, config);
 
     Hotel.associate = function (models) {
-    // conection with ticket db
-        Ticket.belongsToMany(models.Hotel, {
+        // conection with ticket db
+        Hotel.belongsToMany(models.Hotel, {
             as: 'Hotels',
             through: 'Hotels_tickets',
             foreignKey: 'ticket_id',
-            other: 'Hotel_id',
+            otherKey: 'Hotel_id',
         })
-    //conection with package db
-    Hotel.hasMany(models.Package, {
-        as: "packages",
-        foreignKey: "hotel_id"
-    })
+        //conection with package db
+        Hotel.hasMany(models.Package, {
+            as: "packages",
+            foreignKey: "hotel_id"
+        })
     }
 
-    return Ticket
+    return Hotel
 };

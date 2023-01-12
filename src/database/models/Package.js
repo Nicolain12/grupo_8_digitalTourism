@@ -23,9 +23,13 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
 
-        created_at: dataTypes.TIMESTAMP,
+        created_at: {
+            type: dataTypes.DATE
+        },
 
-        updated_at: dataTypes.TIMESTAMP
+        updated_at: {
+            type: dataTypes.DATE
+        }
     };
     let config = {
         timestamps: true,
@@ -44,7 +48,7 @@ module.exports = (sequelize, dataTypes) => {
             as: 'tickets',
             through: 'package_tickests',
             foreignKey: 'package_id',
-            other: 'ticket_id',
+            otherKey: 'ticket_id',
         })
 
         //conection with fly db

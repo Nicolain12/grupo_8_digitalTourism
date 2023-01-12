@@ -18,7 +18,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
 
-        return: {
+        reach: {
             type: dataTypes.STRING,
             allowNull: false
         },
@@ -58,9 +58,13 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
 
-        created_at: dataTypes.TIMESTAMP,
+        created_at:{ 
+            type: dataTypes.DATE
+        },
 
-        updated_at: dataTypes.TIMESTAMP
+        updated_at:{ 
+            type: dataTypes.DATE
+        }
 
     };
     let config = {
@@ -80,7 +84,7 @@ module.exports = (sequelize, dataTypes) => {
             as: 'tickets',
             through: 'flys_tickets',
             foreignKey: 'fly_id',
-            other: 'ticket_id',
+            otherKey: 'ticket_id',
         })
         //conection with package db
         Fly.hasMany(models.Package, {

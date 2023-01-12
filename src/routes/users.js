@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const usersController = require('../controllers/usersController')
 const path = require('path');
-const authLogg = require('../middlewares/authLogg')
+
 
 
 //VALIDATIONS
@@ -61,33 +61,33 @@ const upload = multer({ storage: storage })
 
 
 
-//list products
-router.get('/', usersController.users)
+// // list user
+// router.get('/', usersController.users)
 
-//choose
-router.get('/choose', authLogg, usersController.choose)
+// //choose
+// router.get('/choose', usersController.choose)
 
-//profile
-router.get('/profile/:id', usersController.profile)
+// //profile
+// router.get('/profile/:id', usersController.profile)
 
-//edit user
-router.get('/editUser/:id', usersController.editUser)
-router.put('/userUpdate/:id', upload.single('fileEdit'), usersController.userUpdate)
+// //edit user
+// router.get('/editUser/:id', usersController.editUser)
+// router.put('/userUpdate/:id', upload.single('fileEdit'), usersController.userUpdate)
 
-//login
-router.get('/loggin', authLogg, usersController.login)
-router.post('/loggin', validationsLoggin, authLogg, usersController.loggSubmit)
+// //login
+// router.get('/loggin', usersController.login)
+// router.post('/loggin', validationsLoggin, usersController.loggSubmit)
 
-//loggOut
-router.post('/loggOut', usersController.loggOut)
+// //loggOut
+// router.post('/loggOut', usersController.loggOut)
 
-//register
-router.get('/register', authLogg, usersController.register)
-router.post('/registerUser', authLogg, upload.single('userImg'), validationsRegister, usersController.registerUser)
+// //register
+// router.get('/register', usersController.register)
+// router.post('/registerUser', upload.single('userImg'), validationsRegister, usersController.registerUser)
 
-// delete user
-router.get('/deleteConfirm/:id', usersController.deleteConfirm)
-router.delete('/distroy/:id', usersController.distroy)
+// // delete user
+// router.get('/deleteConfirm/:id', usersController.deleteConfirm)
+// router.delete('/distroy/:id', usersController.distroy)
 
 
 module.exports = router

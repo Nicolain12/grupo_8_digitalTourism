@@ -29,15 +29,20 @@ module.exports = (sequelize, dataTypes) => {
         },
         
         admin: {
-            type: dataTypes.BOOLEAN
+            type: dataTypes.BOOLEAN,
+            allowNull: false
         },
         image: {
             type: dataTypes.STRING(100)
         },
 
-        created_at: dataTypes.TIMESTAMP,
+        created_at: {
+            type: dataTypes.DATE
+        },
 
-        updated_at: dataTypes.TIMESTAMP
+        updated_at: {
+            type: dataTypes.DATE
+        }
     };
     let config = {
         timestamps: true,

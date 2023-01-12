@@ -28,8 +28,11 @@ app.set('views', path.join(__dirname, '../views')) // Path "views"
 //session
 const session = require('express-session')
 app.use(session({secret: 'Secret'}))
-const isInSession = require('./middlewares/isInSession')
-app.use(isInSession)
+
+
+// const isInSession = require('./middlewares/isInSession')
+// app.use(isInSession)
+
 
 // port
 const PORT = process.env.PORT || 3000

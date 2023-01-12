@@ -1,0 +1,22 @@
+   <div class="content-carrusel">
+        <% for(let product of products) { %>
+
+          <div class="item-carrusel" id="item-carrusel-<%= product.id %>">
+            <div class="item-image">
+              <a href="/products/detail/<%= product.id %> "><img src="./images/products/<%= product.image %>" alt=""></a>
+              <h5><%= product.departure %> ---> <%= product.reach%></h5>
+            </div>
+            <div class="item-arrow">
+              <a href="#item-carrusel-<%=carruselArrowLeft(product.id)%>"><i class="fa-solid fa-chevron-left"></i></a>
+              <a href="#item-carrusel-<%=carruselArrowRight(product.id)%>"><i class="fa-solid fa-chevron-right"></i></a>
+            </div>
+          </div>
+
+        <% } %> 
+      </div> 
+
+      
+        <section class="section-article">
+        <!-- En esta parte ahora estan las ofertas pero algun dia van a ir los ultimos paquetes visitados -->
+            <%- include('./partials/productArticle') %>  
+        </section>
